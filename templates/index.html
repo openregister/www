@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Registers{% endblock%}
+{% block content %}
+  <div class="info-page">
+    <div class="row">
+      <h1>Registers</h1>
+      <div class="small-12 large-12 columns intro-para">A register is factual data that the law says government must record, which meets a user need and may be cited as the official source of the truth.</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 large-8 columns large-offset-4">
+      <h2>Characteristics of a register</h2>
+      <p>A register consists of:</p>
+      <ul>
+        <li>a single dataset conforming to a defined standard</li>
+        <li>a standard API for reading data</li>
+        <li>a standard API for adding to a register</li>
+        <li>automated tests for verifying the register-specific rules for data integrity</li>
+        <li>a digital certificate to sign changes to a register</li>
+        <li>a tamper-proof audit trail of changes made to a register</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 large-8 columns large-offset-4">
+      <h2>Aims of the register project</h2>
+      <p>Over the course of the alpha and beta stages of the register project, the aim will be to show the following by way of working software:</p>
+      <ul>
+        <li>a standard for datatypes and field names for register entries</li>
+        <li>a software appliance that exhibits the charateristics of a register</li>
+        <li>a set of tools for independently verfiying the integrity of a register and the data held within it</li>
+      </ul>
+    </div>
+  </div>
+
+{%  endblock %}

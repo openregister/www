@@ -1,0 +1,17 @@
+
+{
+  "name": "openregister",
+  "version": "0.0.0",
+  "license": "MIT LICENSE",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/vendor"
+  ],
+  "dependencies": {
+    "foundation": "zurb/bower-foundation#~5.5",
+    "roboto-slab-fontface": "*"
+  }
+}

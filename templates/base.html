@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='vendor/roboto-slab-fontface/roboto-slab-fontface.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='vendor/foundation/css/foundation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/dist/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/foundation/js/foundation.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery.cookie/jquery.cookie.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <div class="draft">
+       <h4>THIS IS A DRAFT</h4>
+    </div>
+    <div class="row">
+      <div class="small 12 large-12 columns">
+         <nav id="global-nav" class="right">
+          <a href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="dropdown">burger</a><br>
+            <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+              <li><a href="{{url_for('index')}}">Home</a></li>
+              <li><a href="{{url_for('documentation')}}">Developer Documentation</a></li>
+            </ul>
+        </nav>
+      </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

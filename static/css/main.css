@@ -1,0 +1,81 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+  font: helvetica neue, arial;
+  background-color: none;
+  color: #0b0c0c;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.draft {
+  text-align:center;
+  background:#333;
+  font-weight:bold;
+  padding: 2px;
+  margin-bottom: 15px;
+}
+
+.draft h4 {
+  color:#fff !important;
+}
+
+.info-page {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 50px!important;
+  padding: 15px;
+}
+
+.info-page h1 {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.info-page h2 {
+  margin-top: 30px;
+}
+
+.info-page h3 {
+  margin-top: 30px;
+}
+
+.info-page h4 {
+  font-size: 19px;
+}
+
+.intro-para {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#global-nav {
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+#global-nav > a {
+  display:block;
+  text-indent:-9999px;
+  height: 30px;
+  width: 30px;
+  background: url(/static/images/burger_icon.png) no-repeat;
+  background-size: contain;
+}
+
+pre code {
+  display: block;
+  padding: 0.5em;
+  color: #333;
+  overflow: scroll;
+}
