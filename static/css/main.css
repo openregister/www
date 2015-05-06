@@ -79,3 +79,11 @@ pre code {
   color: #333;
   overflow: scroll;
 }
+
+.doclinks {
+  position: fixed;
+}
+
+.doclinks ul {
+  list-style: none;
+}

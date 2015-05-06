@@ -1,9 +1,23 @@
 {% extends "base.html" %}
 {% block title %}Developer Documentation{% endblock%}
 {% block content %}
- <div class="row">
-    <div class="small-12 large-12 columns">
-      <h3>Create entry</h3>
+
+<div class="row">
+  <div class="large-2 columns doclinks">
+    <h3>Documentation</h3>
+    <ul>
+      <li><a href="">Overview</a></li>
+      <li><a href="#entry">Create an entry</a></li>
+      <li><a href="#get">Get entry by identifier</a></li>
+      <li><a href="#search">Search for an entry</a></li>
+    </ul>
+  </div>
+  <div class="large-9 columns">
+    <h3>Overview</h3>
+    <p>A register is a data store that stores entries that conform to the data contraints expressed in the field and data type registers. In addition the shape of an entry, as in the fields contained within an entry is specified in the register register.</p>
+    <p>This page documents the read and write interfaces to a register.</p>
+
+    <a name="entry"></a><h3>Create entry</h3>
       <table>
         <thead>
           <tr>
@@ -24,11 +38,7 @@
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="small-12 large-12 columns">
     <h4>Example request</h4>
     <pre>
       <code class="shell">
@@ -46,12 +56,7 @@
       {status: 202, message: "Record saved successfully"}
     </code>
     </pre>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="small-12 large-12 columns">
-      <h3>Search for an entry</h3>
+    <a name="search"></a><h3>Search for an entry</h3>
       <table>
         <thead>
           <tr>
@@ -70,45 +75,35 @@
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="small-12 large-12 columns">
     <h4>Parameters</h4>
     <table>
-        <thead>
+      <thead>
           <tr>
             <th>Parameter</th>
             <th>Description</th>
             <th>Required</th>
           </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>_query</td>
-            <td>Search term</td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>_representation</td>
-            <td>Representation of response body, e.g json, csv etc. Default is html.</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+      </thead>
+      <tbody>
+        <tr>
+          <td>_query</td>
+          <td>Search term</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>_representation</td>
+          <td>Representation of response body, e.g json, csv etc. Default is html.</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <div class="row">
-    <div class="small-12 large-12 columns">
     <h4>Example request</h4>
       <pre>
         <code class="shell">
   curl http://register.openregister.org/search?_query=school&_representation=json
         </code>
       </pre>
-
       <h4>Response</h4>
       <pre>
         <code class="json">[{
@@ -131,36 +126,26 @@
     }
   }
 ]</code>
-      </pre>
-    </div>
-  </div>
-
-   <div class="row">
-    <div class="small-12 large-12 columns">
-      <h3>Get entry by hash</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>HTTP Method</th>
-            <th>Path</th>
-            <th>Headers</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>GET</td>
-            <td>/hash/[hash]</td>
-            <td></td>
-            <td>Get the entry given it's hash</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="small-12 large-12 columns">
+  </pre>
+  <a name="get"></a><h3>Get entry by hash</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>HTTP Method</th>
+          <th>Path</th>
+          <th>Headers</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GET</td>
+          <td>/hash/[hash]</td>
+          <td></td>
+          <td>Get the entry given it's hash</td>
+        </tr>
+      </tbody>
+    </table>
     <h4>Parameters</h4>
     <table>
         <thead>
@@ -178,21 +163,17 @@
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="small-12 large-12 columns">
-      <h4>Example request</h4>
-      <pre>
+  <h4>Example request</h4>
+    <pre>
     <code class="shell">
       curl http://register.openregister.org/hash/ad183e6ed25737ce4c71bbd652513ba8952c982d?_representation=json
     </code>
     </pre>
 
-      <h4>Response</h4>
-      <pre>
-        <code class="json">[{
+  <h4>Response</h4>
+    <pre>
+    <code class="json">[{
   "hash":"ad183e6ed25737ce4c71bbd652513ba8952c982d",
   "entry:{
     "register":"School",
@@ -212,8 +193,8 @@
     }
   }
 ]</code>
-      </pre>
-    </div>
+    </pre>
   </div>
+</div>
 
 {%  endblock %}
