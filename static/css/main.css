@@ -22,10 +22,12 @@ body {
 .header-wrapper {
   color: #ffffff;
   background-color: #2372b5;
-  margin-bottom: 25px;
-  padding-top: 60px;
-  padding-bottom: 50px;
   margin-bottom: 60px;
+}
+
+.header-wrapper a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .header-wrapper h1 {
@@ -34,8 +36,21 @@ body {
   font-size: 3.2rem;
 }
 
-.header-wrapper p {
+header {
+  margin-top: 60px;
+}
+
+header p {
   font-size: 1.5rem;
+  margin-bottom: 75px;
+}
+
+header.docs {
+  margin-top: 20px;
+}
+header.docs h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
 }
 
 pre code {
