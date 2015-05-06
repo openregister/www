@@ -1,15 +1,31 @@
 {% extends "base.html" %}
 {% block title %}Registers{% endblock%}
 {% block content %}
-  <div class="info-page">
+
+  <div class="header-wrapper">
     <div class="row">
-      <h1>Registers</h1>
-      <div class="small-12 large-12 columns intro-para">A register is factual data that the law says government must record, which meets a user need and may be cited as the official source of the truth.</div>
+      <div class="large-8 columns">
+        <h1>Registers</h1>
+        <p>A register is factual data that the law says government must record, which meets a user need and may be cited as the official source of the truth.</p>
+      </div>
+      <div class="large-3 columns large-offset-1">
+        <img id="crest" src="/static/images/crest_white.png">
+      </div>
     </div>
   </div>
+
   <div class="row">
-    <div class="small-12 large-8 columns large-offset-4">
-      <h2>Characteristics of a register</h2>
+    <div class="large-3 columns links">
+      <ul>
+        <li><a href="#characteristics">Characteristics of a register</li>
+        <li><a href="#aims">Aims of the register project</li>
+        <li><a href="#replaces">What it replaces</li>
+      </ul>
+      <p id="docs"><a href="/documentation">Developer documentation</a></p>
+    </div>
+    <div class="large-8 columns large-offset-1">
+
+      <a name="characeristics"></a><h2>Characteristics of a register</h2>
       <p>A register consists of:</p>
       <ul>
         <li>a single dataset conforming to a defined standard</li>
@@ -19,18 +35,18 @@
         <li>a digital certificate to sign changes to a register</li>
         <li>a tamper-proof audit trail of changes made to a register</li>
       </ul>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="small-12 large-8 columns large-offset-4">
-      <h2>Aims of the register project</h2>
+      <a name="aims"></a><h2>Aims of the register project</h2>
       <p>Over the course of an alpha and beta the aim is to demonstrate by way of working software, the following:</p>
       <ul>
         <li>a standard for datatypes and field names for register entries</li>
         <li>a software appliance that exhibits the charateristics of a register</li>
         <li>a set of tools for independently verfiying the integrity of a register and the data held within it</li>
       </ul>
+
+      <a name="aims"></a><h2>What it replaces</h2>
+      <p>Something here</p>
+
     </div>
   </div>
 

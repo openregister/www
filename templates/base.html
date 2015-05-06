@@ -14,20 +14,6 @@
     {% block head %} {% endblock %}
   </head>
   <body>
-    <div class="draft">
-       <h4>THIS IS A DRAFT</h4>
-    </div>
-    <div class="row">
-      <div class="small 12 large-12 columns">
-         <nav id="global-nav" class="right">
-          <a href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="dropdown">burger</a><br>
-            <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
-              <li><a href="{{url_for('index')}}">Home</a></li>
-              <li><a href="{{url_for('documentation')}}">Developer Documentation</a></li>
-            </ul>
-        </nav>
-      </div>
-    </div>
     {% block content %}
     {% endblock %}
     <script>
