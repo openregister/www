@@ -66,6 +66,7 @@ pre code {
 }
 
 p#docs {
-  border: solid 2px #2372b5;
+  border: solid 1px #2372b5;
   padding: 10px;
+  font-weight: bold;
 }
