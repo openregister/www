@@ -14,6 +14,10 @@ body {
   max-width: 80% !important;
 }
 
+#crest {
+  padding-bottom: 40px;
+}
+
 .header-wrapper {
   color: #ffffff;
   background-color: #2372b5;
