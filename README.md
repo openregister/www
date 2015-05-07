@@ -19,4 +19,4 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Go to http://localhost:8000
+Go to [http://localhost:8000](http://localhost:8000)
