@@ -7,9 +7,7 @@ from flask import (
 
 from flask.ext.basicauth import BasicAuth
 
-
 app = Flask(__name__)
-
 
 if os.environ.get('BASIC_AUTH_USERNAME'):
     app.config['BASIC_AUTH_USERNAME'] = os.environ['BASIC_AUTH_USERNAME']
@@ -17,9 +15,11 @@ if os.environ.get('BASIC_AUTH_USERNAME'):
     app.config['BASIC_AUTH_FORCE'] = True
     basic_auth = BasicAuth(app)
 
+
 @app.route("/")
 def index():
     return render_template("index.html")
+
 
 @app.route("/documentation")
 def documentation():
