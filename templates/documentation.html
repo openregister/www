@@ -53,12 +53,18 @@
     <h4>Example request</h4>
     <pre>
       <code class="shell">
-  curl -n -X POST http://register.openregister.org/create \
+  curl -n -X POST http://school.openregister.org/create \
     -H "Content-Type: application/json" \
     -d '{
-       "register":"School",
-       "fields":["school", "name", "startDate", "endDate", "gender", "religiousCharacter", "minAge", "maxAge", "headTeacher", "website", "address"],
-       "text": "The school register"}'
+       "school": 123456,
+       "name": "St. Elsewhere Primary School",
+       "startDate": "2015-01-01",
+       "minAge": 3,
+       "maxAge": 10,
+       "headTeacher": "Ms. J Brodie",
+       "website": "http://www.st-elsewhere-primary.org",
+       "address": 123456789012
+     }'
     </code>
   </pre>
     <h4>Response</h4>
@@ -112,7 +118,7 @@
     <h4>Example request</h4>
       <pre>
         <code class="shell">
-  curl http://register.openregister.org/search?_query=school&_representation=json
+  curl http://school.openregister.org/search?_query=elsewhere&_representation=json
         </code>
       </pre>
       <h4>Response</h4>
@@ -120,20 +126,14 @@
         <code class="json">[{
   "hash":"ad183e6ed25737ce4c71bbd652513ba8952c982d",
   "entry":{
-    "register":"School",
-      "fields":[
-        "school",
-        "name",
-        "startDate",
-        "endDate",
-        "gender",
-        "religiousCharacter",
-        "minAge",
-        "maxAge",
-        "headTeacher",
-        "website",
-        "address"
-        ]
+       "school": 123456,
+       "name": "St. Elsewhere Primary School",
+       "startDate": "2015-01-01",
+       "minAge": 3,
+       "maxAge": 10,
+       "headTeacher": "Ms. J Brodie",
+       "website": "http://www.st-elsewhere-primary.org",
+       "address": 123456789012
     }
   }
 ]</code>
@@ -178,7 +178,7 @@
   <h4>Example request</h4>
     <pre>
     <code class="shell">
-      curl http://register.openregister.org/hash/ad183e6ed25737ce4c71bbd652513ba8952c982d?_representation=json
+      curl http://school.openregister.org/hash/ad183e6ed25737ce4c71bbd652513ba8952c982d?_representation=json
     </code>
     </pre>
 
@@ -186,21 +186,15 @@
     <pre>
     <code class="json">[{
   "hash":"ad183e6ed25737ce4c71bbd652513ba8952c982d",
-  "entry:{
-    "register":"School",
-    "fields":[
-        "school",
-        "name",
-        "startDate",
-        "endDate",
-        "gender",
-        "religiousCharacter",
-        "minAge",
-        "maxAge",
-        "headTeacher",
-        "website",
-        "address"
-     ]
+  "entry":{
+       "school": 123456,
+       "name": "St. Elsewhere Primary School",
+       "startDate": "2015-01-01",
+       "minAge": 3,
+       "maxAge": 10,
+       "headTeacher": "Ms. J Brodie",
+       "website": "http://www.st-elsewhere-primary.org",
+       "address": 123456789012
     }
   }
 ]</code>
