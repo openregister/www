@@ -80,10 +80,18 @@ pre code {
   margin-bottom: 10px;
 }
 
-p#docs {
-  border: solid 1px #2372b5;
-  padding: 10px;
-  font-weight: bold;
+.button {
+  border: solid 1px #2372b5 !important;
+  background: inherit;
+  color: #2372b5;
+  padding: 15px;
+}
+
+.button:hover,
+.button:focus,
+.button:hover,
+.button:focus {
+  background-color: #2372b5;
 }
 
 @media only screen and (max-width: 40em) {
