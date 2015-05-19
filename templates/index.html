@@ -1,54 +1,41 @@
 {% extends "base.html" %}
 {% block title %}Registers{% endblock%}
 {% block content %}
-
-  <div class="header-wrapper">
-    <div class="row">
-      <header>
-        <div class="large-8 columns">
-          <h1 class="header">Registers</h1>
-          <p>A register is factual data that the law says government must record, which meets a user need and may be cited as the official source of the truth.</p>
-        </div>
-        <div class="large-3 columns large-offset-1">
-          <img id="crest" src="/static/images/big_crest_white.png">
-        </div>
-      </header>
-    </div>
-  </div>
+{% include 'banner.html' %}
 
   <div class="row">
-    <div class="large-4 columns links">
+    <div class="large-4 columns counts">
       <ul>
-        <li><a href="#characteristics">Characteristics of a register</li>
-        <li><a href="#aims">Aims of the register project</li>
-        <li><a href="#replaces">What it replaces</li>
+      <li><a href="http://register.openregister.org"><strong>1234</strong> <p>Registers</p></a>
+      <li><a href="http://field.openregister.org"><strong>99</strong> <p>Fields</p></a>
+      <li><a href="http://datatype.openregister.org"><strong>9</strong> <p>Datatypes</p></a>
       </ul>
-      <p><a href="/documentation" class="button">Developer documentation</a></p>
     </div>
-    <div class="large-8 columns">
-      <a name="characeristics"></a><h2>Characteristics of a register</h2>
-      <p>A register consists of:</p>
-      <ul>
-        <li>a single dataset conforming to a defined standard</li>
-        <li>a standard API for reading data</li>
-        <li>a standard API for adding to a register</li>
-        <li>automated tests for verifying the register-specific rules for data integrity</li>
-        <li>a digital certificate to sign changes to a register</li>
-        <li>a tamper-proof audit trail of changes made to a register</li>
-      </ul>
 
-      <a name="aims"></a><h2>Aims of the register project</h2>
-      <p>Over the course of an alpha and beta the aim is to demonstrate by way of working software, the following:</p>
-      <ul>
-        <li>a standard for datatypes and field names for register entries</li>
-        <li>a software appliance that exhibits the charateristics of a register</li>
-        <li>a set of tools for independently verfiying the integrity of a register and the data held within it</li>
-      </ul>
+    <div class="large-8 columns blurb">
+        <p>Registers contain factual data the law says government must record, which meets a user need and may be cited as the official source of truth. Example registers include:
+            <a href="http://address.openregister.org">address</a>,
+            <a href="http://country.openregister.org">country</a>,
+            <a href="http://postcode.openregister.org">postcode</a>,
+            <a href="http://post-town.openregister.org">post-town</a>, and
+            <a href="http://school.openregister.org">school</a>.
+        </p>
 
-      <a name="aims"></a><h2>What it replaces</h2>
-      <p>Something here</p>
+        <p>Entries in a register consists of a set of fields. Example fields include:
+            <a href="http://field.openregister.org/field/name">name</a>,
+            <a href="http://field.openregister.org/field/text">text</a>,
+            <a href="http://field.openregister.org/field/longitude">longitude</a>,
+            <a href="http://field.openregister.org/field/latitude">latitude</a>,
+            <a href="http://field.openregister.org/field/start-date">start-date</a>, and
+            <a href="http://field.openregister.org/field/end-date">end-date</a>,
+        </p>
 
+        <p>Here you can see <a href="/demo">demonstration applications</a> built using the <a href="/developer">register API</a>.</p>
+
+        <p>This <a href="https://www.gov.uk/service-manual/phases/alpha.html">alpha</a> is being developed by a small team at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a> as <a href="https://github.com/openregister">open source software</a>. We welcome contributions and feedback</a>.
+        </p>
     </div>
-  </div>
+ </div>
 
-{%  endblock %}
+{% include 'footer.html' %}
+{% endblock %}

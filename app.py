@@ -20,10 +20,13 @@ if os.environ.get('BASIC_AUTH_USERNAME'):
 def index():
     return render_template("index.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
-@app.route("/documentation")
+@app.route("/developer")
 def documentation():
-    return render_template("documentation.html")
+    return render_template("developer.html")
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8000, debug=True)

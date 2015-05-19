@@ -103,3 +103,64 @@ pre code {
     position: inherit;
   }
 }
+
+#phase-banner p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.alpha-phase {
+  background-color: #d53880;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+.alpha-description {
+  vertical-align: baseline;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.counts ul {
+  list-style: none;
+  margin-left: 0;
+  margin-top: -10px;
+}
+
+strong {
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 1;
+}
+
+.blurb p {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.blurb a {
+  text-decoration: underline;
+}
+
+
+
+.footer {
+  margin-top: 30px;
+  padding-top: 15px;
+  /*border-top: 1px solid #BFC1C3;*/
+}
+
+#ogl-logo {
+  margin-top: 3px;
+}
+
+.open-government-licence {
+  margin-top: 35px;
+}
+
+.open-government-licence p {
+  font-size: 0.7rem;
+  margin-left: -10px;
+  line-height: 0.9rem;
+}
+
