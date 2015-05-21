@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Demonstrations{% endblock%}
+{% block title %}Demonstration applications{% endblock%}
 {% block content %}
 
 <div class="header-wrapper">
@@ -7,16 +7,19 @@
     <header class="docs">
       <div class="large-12 columns">
         <a href="/">Registers</a>
-        <h1>Demonstrations</h1>
+        <h1>Demonstration applications</h1>
       </div>
     </header>
   </div>
 </div>
 
-<div class="row">
-  <div class="large-9 columns">
-    <p><a href="http://school-service.herokuapp.com/">A school finder</a></p>
+<div class="row gallery">
+  <div class="large-12 columns">
+    <h1><a href="http://school-service.herokuapp.com/">School finder</a></h1>
+    <a href="http://school-service.herokuapp.com/"><img src="/static/images/demo/school-finder.jpg"></a>
+    <p>A small <a href="https://github.com/openregister/schools">python/flask application</a> allowing a user to search the <a href="http://school.openregister.org">school register</a> and presenting a page for each school alongside a map and information pulled in from several other associated registers.</p>
   </div>
 </div>
 
+{% include 'footer.html' %}
 {%  endblock %}

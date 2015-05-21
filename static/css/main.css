@@ -133,12 +133,14 @@ strong {
   line-height: 1;
 }
 
-.blurb p {
+.blurb p,
+.gallery p {
   font-size: 1.5rem;
   line-height: 1.25;
 }
 
-.blurb a {
+.blurb a,
+.gallery p a {
   text-decoration: underline;
 }
 
@@ -164,3 +166,8 @@ strong {
   line-height: 0.9rem;
 }
 
+.gallery img {
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px #888888;
+  margin-bottom: 2em;
+}
