@@ -22,9 +22,9 @@
     <li>Developer documentation</a>
         <ul>
           <li><a href="">Overview</a></li>
-          <li><a href="#entry">Create an entry</a></li>
           <li><a href="#get">Get entry by identifier</a></li>
           <li><a href="#search">Search for an entry</a></li>
+          <li><a href="#entry">Create a new entry</a></li>
         </ul>
     </li>
     </ul>
@@ -35,7 +35,69 @@
     <p>A register presents a standard HTTP interface to read </p>
     <p>This page documents the read and write interfaces to a register.</p>
 
-    <a name="entry"></a><h3>Create entry</h3>
+  <a name="get"></a><h3>Get entry by hash</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>HTTP Method</th>
+          <th>Path</th>
+          <th>Headers</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GET</td>
+          <td>/hash/[hash]</td>
+          <td></td>
+          <td>Get the entry given it's hash</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>Parameters</h4>
+    <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_representation</td>
+            <td>Representation of response body, e.g json, csv etc. Default is html.</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+
+  <h4>Example request</h4>
+    <pre>
+    <code class="shell">
+      curl http://school.openregister.org/hash/ad183e6ed25737ce4c71bbd652513ba8952c982d?_representation=json
+    </code>
+    </pre>
+
+  <h4>Response</h4>
+    <pre>
+    <code class="json">[{
+  "hash":"ad183e6ed25737ce4c71bbd652513ba8952c982d",
+  "entry":{
+       "school": 123456,
+       "name": "St. Elsewhere Primary School",
+       "start-date": "2015-01-01",
+       "min-age": 3,
+       "max-age": 10,
+       "headteacher": "Ms. J Brodie",
+       "website": "http://www.st-elsewhere-primary.org",
+       "address": 123456789012
+    }
+  }
+]</code>
+    </pre>
+
+    <a name="entry"></a><h3>Create a new entry in a register</h3>
       <table>
         <thead>
           <tr>
@@ -145,67 +207,6 @@
   }
 ]</code>
   </pre>
-  <a name="get"></a><h3>Get entry by hash</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>HTTP Method</th>
-          <th>Path</th>
-          <th>Headers</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>GET</td>
-          <td>/hash/[hash]</td>
-          <td></td>
-          <td>Get the entry given it's hash</td>
-        </tr>
-      </tbody>
-    </table>
-    <h4>Parameters</h4>
-    <table>
-        <thead>
-          <tr>
-            <th>Parameter</th>
-            <th>Description</th>
-            <th>Required</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>_representation</td>
-            <td>Representation of response body, e.g json, csv etc. Default is html.</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-      </table>
-
-  <h4>Example request</h4>
-    <pre>
-    <code class="shell">
-      curl http://school.openregister.org/hash/ad183e6ed25737ce4c71bbd652513ba8952c982d?_representation=json
-    </code>
-    </pre>
-
-  <h4>Response</h4>
-    <pre>
-    <code class="json">[{
-  "hash":"ad183e6ed25737ce4c71bbd652513ba8952c982d",
-  "entry":{
-       "school": 123456,
-       "name": "St. Elsewhere Primary School",
-       "start-date": "2015-01-01",
-       "min-age": 3,
-       "max-age": 10,
-       "headteacher": "Ms. J Brodie",
-       "website": "http://www.st-elsewhere-primary.org",
-       "address": 123456789012
-    }
-  }
-]</code>
-    </pre>
   </div>
 </div>
 

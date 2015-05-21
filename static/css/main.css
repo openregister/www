@@ -45,11 +45,10 @@ header p {
 }
 
 header.docs {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 header.docs h1 {
-  font-size: 2.2rem;
   margin-bottom: 30px;
 }
 
@@ -171,4 +170,8 @@ strong {
   border: 1px solid black;
   box-shadow: 10px 10px 5px #888888;
   margin-bottom: 2em;
+}
+
+h1 {
+  font-weight: bold;
 }
