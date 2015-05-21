@@ -175,3 +175,8 @@ strong {
 h1 {
   font-weight: bold;
 }
+
+code.shell {
+  background-color: #222;
+  color: #e8e8e8;
+}
