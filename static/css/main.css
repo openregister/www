@@ -60,13 +60,8 @@ pre code {
   overflow: scroll;
 }
 
-.doclinks {
+div.links {
   position: fixed;
-}
-
-.doclinks ul {
-  list-style: none;
-  margin-left: 0;
 }
 
 .links ul {
@@ -79,6 +74,12 @@ pre code {
 .links li {
   margin-bottom: 10px;
 }
+
+.links ul ul li:before {
+ content: "\00BB";
+ margin: 0 0.5em;
+}
+
 
 .button {
   border: solid 1px #2372b5 !important;
