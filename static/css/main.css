@@ -79,7 +79,6 @@ div.links {
  margin: 0 0.5em;
 }
 
-
 .button {
   border: solid 1px #2372b5 !important;
   background: inherit;
@@ -90,18 +89,6 @@ div.links {
 .button:hover,
 .button:focus {
   background-color: #2372b5;
-}
-
-@media only screen and (max-width: 40em) {
-  .doclinks {
-    position: inherit;
-  }
-}
-
-@media only screen and (max-width: 64em) {
-  .doclinks {
-    position: inherit;
-  }
 }
 
 #phase-banner p {
@@ -144,8 +131,6 @@ strong {
   text-decoration: underline;
 }
 
-
-
 .footer {
   margin-top: 30px;
   padding-top: 15px;
@@ -179,4 +164,20 @@ h1 {
 code.shell {
   background-color: #222;
   color: #e8e8e8;
+}
+
+@media only screen and (max-width: 40em) {
+
+  .header-wrapper h1 {
+    font-size: 2.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 64em) {
+
+  div.links {
+    position: relative;
+  }
+
 }
