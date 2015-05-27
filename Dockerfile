@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 ADD . /usr/src/app
 
-CMD ["python", "manage.py", "-c", "config.DockerConfig", "runserver"]
+CMD ["python", "app.py"]
