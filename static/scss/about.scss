@@ -1,0 +1,90 @@
+// variables, mixins and
+// generic settings. Mainly based
+// on govuk  toolkit and elements
+@import 'helpers';
+@import 'measurements';
+@import 'colours';
+@import 'globals';
+@import 'typography';
+
+// specific styles for this page
+
+// the horizontal section styles
+@import 'sections';
+
+// the benefits list styles
+@import 'benefits';
+
+// ---
+// header tweaks
+// ---
+.header-wrapper {
+  margin-bottom: 0;
+
+  p {
+    color: #fff;
+  }
+
+  header {
+    margin-top: 0;
+  }
+}
+
+.header__heading {
+  color: #fff;
+}
+
+.header__nav a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ---
+// for the main image
+// ---
+.register-visual {
+  margin-top: ($gutter+$gutter-half);
+}
+
+.register-visual-caption {
+  @extend .small-text;
+  color: $secondary-text;
+  margin-left: 10px;
+  margin-bottom: -20px;
+}
+
+// ---
+// specific styles for the "who" section
+// ---
+.who__wrapper {
+  padding-top: $gutter/2;
+}
+
+.who-icons {
+  width: 50%;
+}
+
+.who__content {
+  padding-top: $gutter-half;
+}
+
+// ---
+// other tweaks
+// ---
+.blurb {
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 3*$gutter 0 2*$gutter;
+
+  a {
+    @extend .link--underline;
+  }
+}
+
+.open-government-licence p {
+  margin-top: 0;
+  @extend .small-text;
+}

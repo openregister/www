@@ -1,0 +1,89 @@
+@mixin heading($font-size, $line-height: 1.2em) {
+  font-size: $font-size;
+  font-weight: 600;
+  line-height: $line-height;
+  color: $text-colour;
+}
+
+body {
+  color: $text-colour;
+  font-size: 19px;
+  line-height: (25 / 19);
+  -webkit-font-smoothing: antialiased;
+}
+
+// overwriting foundation setting these to 1rem
+ul, ol, li, p {
+  font-size: 1em;
+}
+
+ul, ol {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.list-bullet {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.heading-xlarge {
+  @include heading(48px, (50 / 48));
+
+  margin-top: em(15, 32);
+  margin-bottom: em(30, 32);
+}
+
+.heading-large {
+  @include heading(36px, (40 / 36));
+
+  margin-top: em(25, 24);
+  margin-bottom: em(10, 24);
+}
+
+.heading-medium {
+  @include heading(24px, (30 / 24));
+
+  margin-top: em(25, 20);
+  margin-bottom: em(10, 20);
+}
+
+.heading-small {
+  @include heading(19px, (25 / 19));
+
+  margin-top: em(10, 16);
+  margin-bottom: em(5, 16);
+}
+
+p {
+  color: $text-colour;
+  line-height: (25 / 19);
+  margin-top: em(5, 16);
+  margin-bottom: em(20, 16);
+}
+
+.small-text {
+  font-size: 16px;
+  line-height: (20 / 16);
+}
+
+// Set a max-width for text blocks
+// Less than 75 characters per line of text
+.text {
+  max-width: 30em;
+}
+
+.lede {
+  margin-top: em(5, 16);
+  margin-bottom: em(20, 16);
+  font-size: 24px;
+}
+
+a {
+  color: $link-colour;
+}
+
+.link--underline,
+a:hover {
+  text-decoration: underline;
+}

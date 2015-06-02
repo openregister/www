@@ -1,0 +1,21 @@
+.section--centre-align {
+  text-align: center;
+}
+
+.section {
+  padding: 2*$gutter 0;
+}
+
+.section h1:first-of-type,
+.section h2:first-of-type {
+  margin-top: 0;
+}
+
+.section--dark {
+  @extend .section;
+  background: $grey;
+}
+
+.section__side__heading {
+  padding-right: $gutter;
+}
