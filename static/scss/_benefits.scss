@@ -1,0 +1,18 @@
+.benefit {
+  border-bottom: 2px solid $border-colour;
+  padding-top: $gutter-half;
+}
+
+.benefit:first-child {
+  padding-top: 0;
+}
+
+.benefit__heading {
+  margin-top: 0;
+  color: $blue;
+  font-weight: bolder;
+}
+
+.benefit__content {
+  color: $secondary-text;
+}

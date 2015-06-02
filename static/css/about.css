@@ -1,0 +1,150 @@
+figure {
+  margin: 30px 0 15px; }
+
+body {
+  color: #0B0C0C;
+  font-size: 19px;
+  line-height: 1.31579;
+  -webkit-font-smoothing: antialiased; }
+
+ul, ol, li, p {
+  font-size: 1em; }
+
+ul, ol {
+  list-style-type: none;
+  margin-left: 0; }
+
+.list-bullet {
+  list-style-type: disc;
+  padding-left: 20px; }
+
+.heading-xlarge {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.04167;
+  color: #0B0C0C;
+  margin-top: 0.46875em;
+  margin-bottom: 0.9375em; }
+
+.heading-large {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.11111;
+  color: #0B0C0C;
+  margin-top: 1.04167em;
+  margin-bottom: 0.41667em; }
+
+.heading-medium {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #0B0C0C;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em; }
+
+.heading-small {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.31579;
+  color: #0B0C0C;
+  margin-top: 0.625em;
+  margin-bottom: 0.3125em; }
+
+p {
+  color: #0B0C0C;
+  line-height: 1.31579;
+  margin-top: 0.3125em;
+  margin-bottom: 1.25em; }
+
+.small-text, .register-visual-caption, .open-government-licence p {
+  font-size: 16px;
+  line-height: 1.25; }
+
+.text {
+  max-width: 30em; }
+
+.lede {
+  margin-top: 0.3125em;
+  margin-bottom: 1.25em;
+  font-size: 24px; }
+
+a {
+  color: #005EA5; }
+
+.link--underline, .blurb a,
+a:hover {
+  text-decoration: underline; }
+
+.section--centre-align {
+  text-align: center; }
+
+.section, .section--dark {
+  padding: 60px 0; }
+
+.section h1:first-of-type, .section--dark h1:first-of-type,
+.section h2:first-of-type,
+.section--dark h2:first-of-type {
+  margin-top: 0; }
+
+.section--dark {
+  background: #F8F8F8; }
+
+.section__side__heading {
+  padding-right: 30px; }
+
+.benefit {
+  border-bottom: 2px solid #BFC1C3;
+  padding-top: 15px; }
+
+.benefit:first-child {
+  padding-top: 0; }
+
+.benefit__heading {
+  margin-top: 0;
+  color: #2372b5;
+  font-weight: bolder; }
+
+.benefit__content {
+  color: #6F777B; }
+
+.header-wrapper {
+  margin-bottom: 0; }
+  .header-wrapper p {
+    color: #fff; }
+  .header-wrapper header {
+    margin-top: 0; }
+
+.header__heading {
+  color: #fff; }
+
+.header__nav a {
+  text-decoration: none; }
+  .header__nav a:hover {
+    text-decoration: underline; }
+
+.register-visual {
+  margin-top: 45px; }
+
+.register-visual-caption {
+  color: #6F777B;
+  margin-left: 10px;
+  margin-bottom: -20px; }
+
+.who__wrapper {
+  padding-top: 15px; }
+
+.who-icons {
+  width: 50%; }
+
+.who__content {
+  padding-top: 15px; }
+
+.blurb {
+  font-size: 24px;
+  font-weight: bolder;
+  margin: 90px 0 60px; }
+
+.open-government-licence p {
+  margin-top: 0; }
+
+/*# sourceMappingURL=about.css.map */
