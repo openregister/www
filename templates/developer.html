@@ -29,176 +29,62 @@
     </ul>
   </div>
   <div class="medium-12 large-8 columns">
-    <h3>Overview</h3>
-    <p>A register is a data store of entries that conform to the data constraints expressed in the <a href="http://field.openregister.org/">field</a> and <a href="http://datatype.openregister.org/">data type</a> registers. In addition the shape of an entry, as in the fields contained within an entry is specified in <a href="http://register.openregister.org/">register of registers.</a></p>
-    <p>A register presents a standard HTTP interface to read </p>
-    <p>This page documents the read and write interfaces to a register.</p>
+    <pre class="json">
+    $ curl -is http://country.openregister.org/country/US.json
+    HTTP/1.1 200 OK
+    Server: Cowboy
+    Date: Thu, 04 Jun 2015 08:42:20 GMT
+    Link: </country/US>; rel="canonical"
+    Content-Type: application/json; charset=utf-8
+    Content-Length: 381
+    X-Cache: MISS from Safesquid o2.2013.0903.1314.3
+    X-Cache: MISS from Squid
+    Via: 1.1 Squid (squid/3.2.11)
+    Connection: keep-alive
 
-  <a name="get"></a><h3>Get entry by hash</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>HTTP Method</th>
-          <th>Path</th>
-          <th>Headers</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>GET</td>
-          <td>/hash/[hash]</td>
-          <td></td>
-          <td>Get the entry given it's hash</td>
-        </tr>
-      </tbody>
-    </table>
-    <h4>Parameters</h4>
-    <table>
-        <thead>
-          <tr>
-            <th>Parameter</th>
-            <th>Description</th>
-            <th>Required</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>_representation</td>
-            <td>Representation of response body, e.g json, csv etc. Default is html.</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-      </table>
-
-  <h4>Example request</h4>
-    <pre>
-    <code class="shell">curl http://school.openregister.org/hash/ad183e6ed25737ce4c71bbd652513ba8952c982d?_representation=json</code>
+    {"hash":"6a499e96106fbf5468bb857bba75308b4d55c652","entry":{"name":"United States","text":"Usage of 'America' and 'American' instead of 'United States' should be avoided unless the context makes clear that 'United States' is intended.","country":"US","citizen-names":"United States citizen","official-name":"The United States of America"},"last-updated":"2015-06-03T16:10:45.918Z"}
     </pre>
 
-  <h4>Response</h4>
-    <pre>
-    <code class="json">[{
-  "hash":"ad183e6ed25737ce4c71bbd652513ba8952c982d",
-  "entry":{
-       "school": 123456,
-       "name": "St. Elsewhere Primary School",
-       "start-date": "2015-01-01",
-       "min-age": 3,
-       "max-age": 10,
-       "headteacher": "Ms. J Brodie",
-       "website": "http://www.st-elsewhere-primary.org",
-       "address": 123456789012
-    }
-  }
-]</code>
+    <pre class="json">
+    $ curl -is http://country.openregister.org/search?country=US&_representation=json
+
+    HTTP/1.1 200 OK
+    Server: Cowboy
+    Date: Thu, 04 Jun 2015 08:42:20 GMT
+    Link: </country/US>; rel="canonical"
+    Content-Type: application/json; charset=utf-8
+    Content-Length: 381
+    X-Cache: MISS from Safesquid o2.2013.0903.1314.3
+    X-Cache: MISS from Squid
+    Via: 1.1 Squid (squid/3.2.11)
+    Connection: keep-alive
+
+    {"hash":"6a499e96106fbf5468bb857bba75308b4d55c652","entry":{"name":"United States","text":"Usage of 'America' and 'American' instead of 'United States' should be avoided unless the context makes clear that 'United States' is intended.","country":"US","citizen-names":"United States citizen","official-name":"The United States of America"},"last-updated":"2015-06-03T16:10:45.918Z"}
+
+
+$ curl -is 'http://country.openregister.org/search?country=US&_representation=ttl'
+HTTP/1.1 200 OK
+Server: Cowboy
+Date: Thu, 04 Jun 2015 08:43:46 GMT
+Content-Type: text/turtle; charset=utf-8
+Content-Length: 541
+X-Cache: MISS from Safesquid o2.2013.0903.1314.3
+X-Cache: MISS from Squid
+Via: 1.1 Squid (squid/3.2.11)
+Connection: keep-alive
+
+@prefix field: <http://fields.openregister.org/field/>.
+
+<http://country.openregister.org/hash/6a499e96106fbf5468bb857bba75308b4d55c652>
+  field:country <http://country.openregister.org/country/US> ;
+  field:name "United States" ;
+  field:official-name "The United States of America" ;
+  field:citizen-names "United States citizen" ;
+  field:start-date "" ;
+  field:end-date "" ;
+  field:text "Usage of 'America' and 'American' instead of 'United States' should be avoided unless the context makes clear that 'United States' is intended." .
     </pre>
 
-    <a name="entry"></a><h3>Create a new entry in a register</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>HTTP Method</th>
-            <th>Path</th>
-            <th>Headers</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>POST</td>
-            <td>/create</td>
-            <td>Content-Type: application/json</td>
-            <td>Create a register entry</td>
-          </tr>
-        </tbody>
-      </table>
-
-    <h4>Example request</h4>
-    <pre>
-      <code class="shell">curl -n -X POST http://school.openregister.org/create \
-    -H "Content-Type: application/json" \
-    -d '{
-       "school": 123456,
-       "name": "St. Elsewhere Primary School",
-       "start-date": "2015-01-01",
-       "min-age": 3,
-       "max-age": 10,
-       "headteacher": "Ms. J Brodie",
-       "website": "http://www.st-elsewhere-primary.org",
-       "address": 123456789012
-     }'</code>
-  </pre>
-    <h4>Response</h4>
-    <pre>
-    <code class="json">
-      {status: 202, message: "Record saved successfully"}
-    </code>
-    </pre>
-    <a name="search"></a><h3>Search for an entry</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>HTTP Method</th>
-            <th>Path</th>
-            <th>Headers</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>GET</td>
-            <td>/search</td>
-            <td></td>
-            <td>Search contents of register</td>
-          </tr>
-        </tbody>
-      </table>
-    <h4>Parameters</h4>
-    <table>
-      <thead>
-          <tr>
-            <th>Parameter</th>
-            <th>Description</th>
-            <th>Required</th>
-          </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>_query</td>
-          <td>Search term</td>
-          <td>Yes</td>
-        </tr>
-        <tr>
-          <td>_representation</td>
-          <td>Representation of response body, e.g json, csv etc. Default is html.</td>
-          <td>No</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h4>Example request</h4>
-      <pre>
-        <code class="shell">curl http://school.openregister.org/search?_query=elsewhere&_representation=json</code>
-      </pre>
-      <h4>Response</h4>
-      <pre>
-        <code class="json">[{
-  "hash":"ad183e6ed25737ce4c71bbd652513ba8952c982d",
-  "entry":{
-       "school": 123456,
-       "name": "St. Elsewhere Primary School",
-       "startDate": "2015-01-01",
-       "minAge": 3,
-       "maxAge": 10,
-       "headTeacher": "Ms. J Brodie",
-       "website": "http://www.st-elsewhere-primary.org",
-       "address": 123456789012
-    }
-  }
-]</code>
-  </pre>
-  </div>
 </div>
 </div>
 
