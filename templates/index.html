@@ -29,8 +29,7 @@
 <section class="section">
   <div class="row">
     <div class="large-4 columns section__side">
-    <h2 id="what" class="heading-large section__side__heading">
-      What are registers?</h2>
+      <h2 id="what" class="heading-large section__side__heading">What are registers?</h2>
     </div>
     <div class="large-8 columns">
 
@@ -39,26 +38,15 @@
           <a href="http://country.openregister.org">country</a>,
           <a href="http://postcode.openregister.org">postcode</a>,
           <a href="http://post-town.openregister.org">post-town</a>, and
-          <a href="http://school.openregister.org">school</a>. Every register consists of a set of fields such as: 
-        <a href="http://field.openregister.org/field/name">name</a>,
-        <a href="http://field.openregister.org/field/text">text</a>,
-        <a href="http://field.openregister.org/field/postcode">postcode</a>,
-        <a href="http://field.openregister.org/field/longitude">longitude</a>,
-        <a href="http://field.openregister.org/field/latitude">latitude</a>,
-        <a href="http://field.openregister.org/field/start-date">start-date</a> and
-        <a href="http://field.openregister.org/field/end-date">end-date</a>. The values that may appear in a field are constrained by its datatype such as: <a href="http://datatype.openregister.org/datatype/string">string</a>,
-        <a href="http://datatype.openregister.org/datatype/integer">integer</a>,
-        <a href="http://datatype.openregister.org/datatype/decimal-degrees">decimal-degrees</a>, and
-        <a href="http://datatype.openregister.org/datatype/curie">curie</a>.
-    <h3 class="heading-medium">What is this alpha?</h3>
-      </p>This alpha demonstrates what registers are, who they are for and how they meet their needs. This prototype is made of alpha registers exposing open data.</p>
+          <a href="http://school.openregister.org">school</a>. 
+        </p>
+      <p>A complete list of registers is maintained in the <a href="http://register.openregister.org/all">register of registers</a>.</p>
 
       <figure class="register-visual">
         <figcaption class="register-visual-caption">A sample entry in the School Register</figcaption>
         <img src="/static/images/about/register-entry-visual.png" alt="A sample entry in the School Register">
       </figure>
     </div>
-  </div>
 </section>
 
 <section class="section--dark section--centre-align">
@@ -124,10 +112,43 @@
           <h3 class="heading-medium benefit__heading">Open Source</h3>
           <p class="benefit__content">The register software is <a href="https://github.com/openregister">open source software</a> - anyone can copy, verify, and contribute to the code. You can run your own copy of a public register using open data.</p>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section--dark ">
+  <div class="row">
+    <div class="large-4 columns section__side">
+      <h2 id="model" class="heading-large section__side__heading">Registers, fields and datatypes</h2>
+    </div>
+    <div class="large-8 columns">
+      <p>Each register consists of a set of fields such as: 
+        <a href="http://field.openregister.org/field/name">name</a>,
+        <a href="http://field.openregister.org/field/text">text</a>,
+        <a href="http://field.openregister.org/field/postcode">postcode</a>,
+        <a href="http://field.openregister.org/field/longitude">longitude</a>,
+        <a href="http://field.openregister.org/field/latitude">latitude</a>,
+        <a href="http://field.openregister.org/field/start-date">start-date</a> and
+        <a href="http://field.openregister.org/field/end-date">end-date</a>. The values that may appear in a field are constrained by its datatype such as: <a href="http://datatype.openregister.org/datatype/string">string</a>,
+        <a href="http://datatype.openregister.org/datatype/integer">integer</a>,
+        <a href="http://datatype.openregister.org/datatype/decimal-degrees">decimal-degrees</a>, and
+        <a href="http://datatype.openregister.org/datatype/curie">curie</a>.
+        </p>
+      <p>A complete list of fields is maintained in the <a href="http://field.openregister.org/all">field register</a>,
+        and a complete list of datatypes in the <a href="http://datatype.openregister.org/all">datatype register</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="row">
+    <div class="large-8 columns">
       <p class="blurb text">This <a href="https://www.gov.uk/service-manual/phases/alpha.html">alpha</a> is being developed by a small team at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>. We welcome contributions and feedback.</p>
     </div>
   </div>
 </section>
+
+
 
 {% include 'footer.html' %}
 {% endblock %}
