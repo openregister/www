@@ -106,6 +106,13 @@ div.links {
   padding: 0.5rem;
 }
 
+a.alpha-phase,
+a.alpha-phase:hover,
+a.alpha-phase:visited,
+a.alpha-phase:active {
+  color: #ffffff;
+}
+
 .alpha-description {
   vertical-align: baseline;
   font-size: 1rem;
