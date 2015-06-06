@@ -99,6 +99,10 @@ a:hover {
 .benefit:first-child {
   padding-top: 0; }
 
+.benefit:last-child {
+  border-bottom: none;
+}
+
 .benefit__heading {
   margin-top: 0;
   color: #0b0c0c;
