@@ -44,7 +44,7 @@
 
 <section class="section--dark section--centre-align">
   <div class="row">
-    <h2 id="who" class="heading-large heading__centre">Who are registers for?</h2>
+    <h2 id="users" class="heading-large heading__centre">The users of registers</h2>
     <div class="who__wrapper">
       <div class="large-4 columns">
         <img class="who-icons" src="/static/images/about/developer-icon.png">
@@ -62,7 +62,7 @@
         <img class="who-icons" src="/static/images/about/everyone-icon.png">
         <h3 class="heading-medium">Everyone</h3>
         <h4 class="heading-small">Citizens of a digital state.</h4>
-        <p class="who__content">Anyone can use open register data. Private data is protected, accessible only by attributes and critically, not shared.</p>
+        <p class="who__content">Anyone can use open register data, and use registers to check the authenticity of data. Private data is kept private.</p>
       </div>
     </div>
   </div>
@@ -71,81 +71,138 @@
 <section class="section">
   <div class="row">
     <div class="large-4 columns section__side">
-      <h2 id="benefits" class="heading-large section__side__heading">Improving integrity</h2>
+      <h2 id="benefits" class="heading-large section__side__heading">Improving the integrity of data</h2>
     </div>
     <div class="large-8 columns">
       <ul class="benefits">
         <li class="benefit" id="authoritative">
           <h3 class="heading-medium benefit__heading">Authoritative</h3>
-          <p class="benefit__content">A register is the single, canonical source of truth for a dataset.</p>
+          <p class="benefit__content">A register has a clear definition, purpose, and is the official source of truth for a dataset.</p>
         </li>
         <li class="benefit" id="trustworthy">
           <h3 class="heading-medium benefit__heading">Trustworthy</h3>
-          <p class="benefit__content">Each register is owned and run by a registrar. Responsibility for the data is made clear, providing greater transparency and a clear process for redress.</p>
+          <p class="benefit__content">Each register is owned and run by a registrar. Responsibility for managing the data held in a register is made clear, providing greater transparency and a clear process for redress.</p>
         </li>
-         <li class="benefit" id="linked">
-          <h3 class="heading-medium benefit__heading">Linked data</h3>
-          <p class="benefit__content">Where data from one register relies on data in another register, the data is linked rather than duplicated, minimising redundancy and reducing errors.</p>
+        <li class="benefit" id="linked">
+          <h3 class="heading-medium benefit__heading">Canonical</h3>
+          <p class="benefit__content">Where data from one register relies on data in another register, the data is linked rather than duplicated, minimising redundancy and clarifying provenance.</p>
         </li>
         <li class="benefit" id="standards">
           <h3 class="heading-medium benefit__heading">Standardised</h3>
-          <p class="benefit__content">Consistently named fields using standard datatypes, behind a <a href="/developer">uniform API</a> simplifies the building of platforms and services using data held in registers.</p>
+          <p class="benefit__content">Consistently named fields, constrained using standard datatypes and exposed through a <a href="/developer">uniform API</a> helps reduce duplication, fraud and error.</p>
+        </li>
+        <li class="benefit" id="tamper-proof">
+          <h3 class="heading-medium benefit__heading">Tamper-proof history</h3>
+          <p class="benefit__content">Register entries are immutable, simplifying <a href="http://country.openregister.org/download">downloading</a>, caching and copying of data. 
+          Individual entries are superseded rather than edited meaning the full history of changes to a register is preserved.
         </li>
         <li class="benefit" id="veracity">
           <h3 class="heading-medium benefit__heading">Independently verifiable</h3>
-          <p class="benefit__content">Physical-digital proofs allow users to independently validate the authenticity of an entry in a registry.</p>
+          <p class="benefit__content"> A secure audit trail records any changes made to a register.
+          The contents of a register may be independently monitored, and the contents checked using using publicly available tests.</p>
         </li>
-        <li class="benefit" id="tamper-proof">
-          <h3 class="heading-medium benefit__heading">Tamper-proof</h3>
-          <p class="benefit__content">A secure audit trail records any changes made to a register. Individual entries are superseded rather than edited. The full history of a register is preserved.</p>
-          <p class="benefit__content">The contents of a register may be independently monitored, and the contents checked using using domain-specific tests.</p>
-        </li>
-        <li class="benefit" id="privacy">
-          <h3 class="heading-medium benefit__heading">Privacy by design</h3>
-          <p class="benefit__content">Private and sensitive data is held separately, only accessible to authorised services in answer to specific questions about individual entries. </p>
+        <li class="benefit" id="veracity">
+          <h3 class="heading-medium benefit__heading">Authentic</h3>
+          <p class="benefit__content">Physical-digital proofs allow users to independently validate the veracity of an entry in a registry. A register entry such as a certificate, permit or licence may later be retracted by a register, but cannot easily be refuted.</p>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
+
 <section class="section--dark ">
   <div class="row">
-    <div class="large-4 columns section__side">
-      <h2 id="model" class="heading-large section__side__heading">Registers, fields and datatypes</h2>
-    </div>
-    <div class="large-8 columns">
-      <p>Each register consists of a set of fields such as: 
-        <a href="http://field.openregister.org/field/name">name</a>,
-        <a href="http://field.openregister.org/field/text">text</a>,
-        <a href="http://field.openregister.org/field/postcode">postcode</a>,
-        <a href="http://field.openregister.org/field/longitude">longitude</a>,
-        <a href="http://field.openregister.org/field/latitude">latitude</a>,
-        <a href="http://field.openregister.org/field/start-date">start-date</a> and
-        <a href="http://field.openregister.org/field/end-date">end-date</a>. 
-      </p>
-      <p>Values that may appear in a field are constrained by its datatype such as: <a href="http://datatype.openregister.org/datatype/string">string</a>,
-        <a href="http://datatype.openregister.org/datatype/integer">integer</a>,
-        <a href="http://datatype.openregister.org/datatype/decimal-degrees">decimal-degrees</a>, and
-        <a href="http://datatype.openregister.org/datatype/curie">curie</a>.
-        </p>
-      <p>A complete list of fields is maintained in the <a href="http://field.openregister.org/all">field register</a>,
-        the complete list of datatypes in the <a href="http://datatype.openregister.org/all">datatype register</a>, 
-      and the complete list of registers is maintained in the <a href="http://register.openregister.org/all">register register</a>.</p>
+    <div class="large-9 columns">
+      <h2 id="privacy" class="heading-large">Designed for privacy</h2>
+      <p>This alpha only uses open data.</p>
+      <p>During beta, some personal and other sensitive data will be held on behalf of users.
+      Private data is stored safely and securely, separate to public registers.
+      Private data stored in a register will not shared, will be only accessible through authorised actions by 
+      trusted services in answer to specific questions about individual entries.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="row">
+    <div class="large-4 columns section__side">
+      <h2 id="model" class="heading-large section__side__heading">A curated data model</h2>
+    </div>
     <div class="large-8 columns">
+      <ul>
+        <li class="benefit" id="entries">
+          <h3 class="heading-medium benefit__heading">Entries</h3>
+          <p>
+            A register is a set of entries identifiable by a primary key. 
+            An entry cannot be changed or deleted, but may be superseded by a newer version.
+            Every version of an entry remains in a register, identified by 
+            URL containing a hash calculated from its contents.
+          </p>
+        </li>
+        <li class="benefit" id="fields">
+          <h3 class="heading-medium benefit__heading">Fields</h3>
+          <p>Each entry consists of a set of fields such as: 
+            <a href="http://field.openregister.org/field/name">name</a>,
+            <a href="http://field.openregister.org/field/text">text</a>,
+            <a href="http://field.openregister.org/field/postcode">postcode</a>,
+            <a href="http://field.openregister.org/field/longitude">longitude</a>,
+            <a href="http://field.openregister.org/field/latitude">latitude</a>,
+            <a href="http://field.openregister.org/field/start-date">start-date</a> and
+            <a href="http://field.openregister.org/field/end-date">end-date</a>. 
+          </p>
+          <p>Every register contains a field of the same name which acts as its primary key and simplifying linking 
+          between registers allowing the keeper of a vehicle to be <code>school:123456</code>, <code>court:90909</code> or
+          <code>company:12324</code>.
+        </li>
+        <li class="benefit" id="datatypes">
+          <h3 class="heading-medium benefit__heading">Datatypes</h3>
+          <p>Values that may appear in a field are constrained by its 
+          <a href="http://standards.data.gov.uk/">open standards</a> based datatype such as:
+            <a href="http://datatype.openregister.org/datatype/string">string</a>,
+            <a href="http://datatype.openregister.org/datatype/integer">integer</a>,
+            <a href="http://datatype.openregister.org/datatype/decimal-degrees">decimal-degrees</a>, and
+            <a href="http://datatype.openregister.org/datatype/curie">curie</a>.
+          </p>
+        <li class="benefit" id="datamodel-registers">
+          <h3 class="heading-medium benefit__heading">The register of registers</h3>
+          <p>A complete list of fields is maintained in the
+            <a href="http://field.openregister.org/all">field register</a>,
+            the complete list of datatypes in the
+            <a href="http://datatype.openregister.org/all">datatype register</a>, 
+            and the complete list of registers is maintained in the
+            <a href="http://register.openregister.org/all">register register</a>.
+          </p>
+        </li>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--dark section--centre-align demos">
+  <div class="row">
+    <h2 id="demos" class="heading-large heading__centre">Demonstrations using registers</h2>
+    <div class="who__wrapper">
+      <div class="large-3 columns">
+        <a href="http://school-service.herokuapp.com/"><img src="/static/images/demo/school-finder.jpg"></a>
+        <h3 class="heading-medium"><a href="http://school-service.herokuapp.com/">School finder</a></h3>
+         <p>A page for every <a href="http://school.openregister.org">school</a> showing related information from other registers.
+        A small <a href="https://github.com/openregister/schools">python/flask application</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="row">
+    <div class="large-10 columns">
       <p class="blurb text">This <a href="https://www.gov.uk/service-manual/phases/alpha.html">alpha</a> is being developed as 
           <a href="https://github.com/openregister">open source software</a>
       by a small team at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>. We welcome contributions and feedback.</p>
     </div>
   </div>
 </section>
-
 
 
 {% include 'footer.html' %}

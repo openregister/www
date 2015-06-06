@@ -151,4 +151,9 @@ a:hover {
 .open-government-licence p {
   margin-top: 0; }
 
+.demos img {
+  border: 1px solid #D5D5D5;
+  box-shadow: -6px 6px 10px 0px rgba(151,151,151,1);
+}
+
 /*# sourceMappingURL=about.css.map */
