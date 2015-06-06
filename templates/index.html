@@ -114,7 +114,7 @@
           The contents of a register may be independently monitored, and the contents checked using using publicly available tests.</p>
         </li>
         <li class="benefit" id="veracity">
-          <h3 class="heading-medium benefit__heading">Authentic</h3>
+          <h3 class="heading-medium benefit__heading">Provable authenticity</h3>
           <p class="benefit__content">Physical-digital proofs allow users to independently validate the veracity of an entry in a registry. A register entry such as a certificate, permit or licence may later be retracted by a register, but cannot easily be refuted.</p>
         </li>
       </ul>
@@ -173,6 +173,25 @@
             <a href="http://datatype.openregister.org/datatype/decimal-degrees">decimal-degrees</a>, and
             <a href="http://datatype.openregister.org/datatype/curie">curie</a>.
           </p>
+        </li>
+        <li class="benefit" id="datamodel-registers">
+          <h3 class="heading-medium benefit__heading">Links</h3>
+          <p>A field maybe defined as reference to another register, for example the 
+            <a href="http://field.openregister.org/field/postcode">postcode</a> field is defined as
+            a reference to the <a href="http://postcode.openregister.org">postcode</a> register, meaning
+            a field value of
+            <code><a href="http://postcode.openregister.org/postcode/WC2B%206NH">WC2B 6NH</a></code> 
+            can be interpreted as the URL
+            <code class="url"><a href="http://postcode.openregister.org/postcode/WC2B%206NH">http://postcode.openregister.org/postcode/WC2B%206NH</a></code>.
+          </p>
+          <p>The <a href="http://datatype.openregister.org/datatype/curie">curie</a> datatype allows
+          a field to contain a link to one of a number of different registers, for example the keeper 
+          of a vehicle could be
+          <code><a href="http://school.openregister.org/school/100002">school:100002</a></code>,  
+          <code><a href="http://charity.openregister.org/charity/225971">charity:225971</a></code>, or
+          <code><a href="http://company.openregister.org/company/01852101">company:01852101</a></code>.
+          </p>
+        </li>
         <li class="benefit" id="datamodel-registers">
           <h3 class="heading-medium benefit__heading">The register of registers</h3>
           <p>A complete list of fields is maintained in the
