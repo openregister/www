@@ -13,9 +13,11 @@
     {% block head %} {% endblock %}
   </head>
   <body>
-{% include 'phase.html' %}
+    {% include 'phase.html' %}
     {% block content %}
     {% endblock %}
+    {% include 'colophon.html' %}
+    {% include 'footer.html' %}
     <script>
       $(document).foundation();
     </script>
