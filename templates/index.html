@@ -13,11 +13,10 @@
         <h1 class="heading-xlarge">Registers</h1>
         <p class="lede">Operational data for the UK government</p>
         <ul class="header__nav list-bullet">
-          <li><a href="#what">Authoritative, factual data</a></li>
-          <li><a href="#who">The users of registers</a></li>
-          <li><a href="#benefits">Improving the integrity of data</a></li>
-          <li><a href="#privacy">Designed for privacy</a></li>
-          <li><a href="#demos">Demonstrations using registers</a></li>
+          <li><a href="#what">Improving registers</a></li>
+          <li><a href="#standards">Establishing standards</a></li>
+          <li><a href="#users">Responding to user needs</a></li>
+          <li><a href="#demos">Demos</a></li>
         </ul>
       </div>
       <div class="large-3 columns large-offset-1">
@@ -30,125 +29,93 @@
 <section class="section">
   <div class="row">
     <div class="large-4 columns section__side">
-      <h2 id="what" class="heading-large section__side__heading">Authoritative, factual data</h2>
+      <h2 id="what" class="heading-large section__side__heading">Improving registers</h2>
     </div>
     <div class="large-8 columns">
 
-      <p>A register is an official collection of factual data services need to meet user needs.</p>
-      <p>Services are verbs and registers are the nouns they act upon. Example registers include:
-          <a href="http://address.openregister.org">address</a>,
-          <a href="http://clinical-commissioning-group.openregister.org/">clinical-commissioning-group</a>,
-          <a href="http://company.openregister.org">company</a>,
-          <a href="http://charity.openregister.org">charity</a>, 
-          <a href="http://country.openregister.org">country</a>,
-          <a href="http://mot-test.openregister.org/">mot-test</a>,
-          <a href="http://postcode.openregister.org">postcode</a>,
-          <a href="http://food-hygiene.openregister.org">food-hygiene-rating</a>,
-          <a href="http://g-cloud-supplier.openregister.org">g-cloud-supplier</a>,
-          <a href="http://g-cloud-supplier-contact.openregister.org">g-cloud-supplier-contact</a>,
-          <a href="http://hospital.openregister.org">hospital</a>,
-          <a href="http://post-town.openregister.org">post-town</a>,
-          <a href="http://public-body.openregister.org">public-body</a>,
-          <a href="http://register-office.openregister.org/">register-office</a>,
-          <a href="http://school.openregister.org">school</a>, and
-          <a href="http://vat-rate.openregister.org/">vat-rate</a>.
-        </p>
+      <p>Registers collect factual data the government needs to provide services. You’ve probably come across many types of registers, eg. <a href="https://beta.companieshouse.gov.uk/">Companies House</a> holds a register of all UK businesses.</p>
+ 
+      <p>At the Government Digital Service, we’re creating an exemplar of how public registers of information should be held, shared and maintained. Improving registers will ensure public data can always be trusted.</p>
 
       <figure class="register-visual">
         <figcaption class="register-visual-caption">A sample entry in the School Register</figcaption>
         <a href="http://school.openregister.org/school/100001"><img src="/static/images/about/register-entry-visual.png" alt="A sample entry in the School Register"></a>
       </figure>
+      <a href="http://register.openregister.org/">See registers made to date</a>
+    </div>
+  </div>
+    <div class="row">
+        <div class="large-8 large-offset-4 columns">
+          <img class="privacy-icon" src="/static/images/about/privacy-icon.png">
+          <p class="callout">This alpha only uses freely available open data, along with some fictional test data. We’re not currently looking at private registers, which are held safely and securely, and only accessed through authorised actions.</p>
+        </div>
     </div>
 </section>
 
-<section class="section--dark section--centre-align">
+<section class="section--dark">
   <div class="row">
-    <h2 id="users" class="heading-large heading__centre">The users of registers</h2>
+    <div class="large-12 columns section__side">
+      <h2 id="standards" class="heading-large section__side__heading">Establishing standards</h2>
+      <p class="section-intro">The improved registers will have a number of specific attributes</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+          <h3 class="heading-medium benefit__heading">Distributed</h3>
+          <p class="benefit__content">Each register resides under its own registrar (e.g. a department or agency), which is fully accountable for the data they collect and maintain</p>
+    </div>
+    <div class="large-4 columns">
+          <h3 class="heading-medium benefit__heading">Canonical</h3>
+          <p class="benefit__content">Registers are the single source of truth for platforms and services, with no duplicated data residing elsewhere</p>
+    </div>
+    <div class="large-4 columns">
+          <h3 class="heading-medium benefit__heading">Verifiable data</h3>
+          <p class="benefit__content">Individuals can verify their licences, permissions or certificates, and service teams can check register data with publicly available tests</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+          <h3 class="heading-medium benefit__heading">Long lived</h3>
+          <p class="benefit__content">Registers remain regardless of whether services change or retire</p>
+    </div>
+    <div class="large-4 columns end">
+          <h3 class="heading-medium benefit__heading">Tamper-proof</h3>
+          <p class="benefit__content">Registers have secure audit trails that can’t be edited, recording any changes made to the data</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--centre-align">
+  <div class="row">
+    <h2 id="users" class="heading-large heading__centre">Responding to user needs</h2>
+    <p class="section-intro">A number of user groups will benefit from the improved registers</p>
     <div class="who__wrapper">
       <div class="large-4 columns">
         <img class="who-icons" src="/static/images/about/developer-icon.png">
-        <h3 class="heading-medium">Digital teams</h3>
-        <h4 class="heading-small">Building services for users.</h4>
-        <p class="who__content">A <a href="/developer">straightforward API</a> and standardised data means we can quickly build services in the context of government, and not just a single organisation.</p>
+        <h3 class="heading-medium">Service teams</h3>
+        <p class="who__content">
+        Registers with a standardised data model and straightforward APIs will help you <a href="/developer">build services quickly</a>.</p>
       </div>
       <div class="large-4 columns">
         <img class="who-icons" src="/static/images/about/registrars-icon.png">
         <h3 class="heading-medium">Registrars</h3>
-        <h4 class="heading-small">Custodians of one or more registers.</h4>
-        <p class="who__content">Registers improve the integrity of the data you hold, and simplify how data is managed. Registers plug into commodity work-management and caseworking systems.</p>
+        <p class="who__content">Teams that are custodians of one or more registers will be able to trust the data they collect and maintain, and be assured it hasn’t been tampered with.</p>
       </div>
       <div class="large-4 columns">
         <img class="who-icons" src="/static/images/about/everyone-icon.png">
-        <h3 class="heading-medium">Everyone</h3>
-        <h4 class="heading-small">Citizens of a digital state.</h4>
-        <p class="who__content">Anyone can use open register data, and use registers to check the authenticity of data. Private data is kept private.</p>
+        <h3 class="heading-medium">Citizens</h3>
+        <p class="who__content">Citizens will know which departments or agencies maintain and update their data, and which services have access to their data.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section--dark section--centre-align demos">
   <div class="row">
-    <div class="large-4 columns section__side">
-      <h2 id="benefits" class="heading-large section__side__heading">Improving the integrity of data</h2>
-    </div>
-    <div class="large-8 columns">
-      <ul class="benefits">
-        <li class="benefit" id="authoritative">
-          <h3 class="heading-medium benefit__heading">Authoritative</h3>
-          <p class="benefit__content">A register has a clear definition, purpose, and is the official source of truth for a dataset.</p>
-        </li>
-        <li class="benefit" id="trustworthy">
-          <h3 class="heading-medium benefit__heading">Trustworthy</h3>
-          <p class="benefit__content">Each register is owned and run by a registrar. Responsibility for managing the data held in a register is made clear, providing greater transparency and a clear process for redress.</p>
-        </li>
-        <li class="benefit" id="linked">
-          <h3 class="heading-medium benefit__heading">Canonical</h3>
-          <p class="benefit__content">Where data from one register relies on data in another register, the data is linked rather than duplicated, minimising redundancy and clarifying provenance.</p>
-        </li>
-        <li class="benefit" id="standards">
-          <h3 class="heading-medium benefit__heading">Standardised</h3>
-          <p class="benefit__content">Consistently named fields, constrained using standard datatypes and exposed through a <a href="/developer">uniform API</a> helps reduce duplication, fraud and error.</p>
-        </li>
-        <li class="benefit" id="tamper-proof">
-          <h3 class="heading-medium benefit__heading">Tamper-proof history</h3>
-          <p class="benefit__content">Register entries are immutable, simplifying <a href="http://country.openregister.org/download">downloading</a>, caching and copying of data. 
-          Individual entries are superseded rather than edited meaning the full history of changes to a register is preserved.
-        </li>
-        <li class="benefit" id="verifiable">
-          <h3 class="heading-medium benefit__heading">Independently verifiable</h3>
-          <p class="benefit__content"> A secure audit trail records any changes made to a register.
-          The contents of a register may be independently monitored, and the contents checked using using publicly available tests.</p>
-        </li>
-        <li class="benefit" id="authenticity">
-          <h3 class="heading-medium benefit__heading">Provable authenticity</h3>
-          <p class="benefit__content">Physical-digital proofs allow users to independently prove the veracity of an entry in a registry. A register entry such as a certificate, permit or licence may later be retracted by a register, but cannot easily be refuted.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section--dark ">
-  <div class="row">
-    <div class="large-9 columns">
-      <h2 id="privacy" class="heading-large">Designed for privacy</h2>
-      <p>This alpha only uses freely available open data, along with some fictional test data.</p>
-      <p>During beta, some personal and other sensitive data may be held in a private register, but only with the explicit consent of users of alpha services.</p>
-      <p>Data stored in a private register is held safely and securely. It is never shared, and may only be accessed through authorised actions by 
-      trusted services in answer to specific questions about individual entries.</p>
-    </div>
-    <div class="large-3 columns">
-      <img class="privacy-icon" src="/static/images/about/private-icon.png">
-    </div>
-  </div>
-</section>
-
-<section class="section--centre-align demos">
-  <div class="row">
-    <h2 id="demos" class="heading-large heading__centre">Demonstrations using registers</h2>
+    <h2 id="demos" class="heading-large heading__centre">Demos</h2>
+    <p class="section-intro">Check out the services we’ve built using improved registers</p>
     <div class="who__wrapper">
-      <div class="large-3 columns">
+      <div class="large-4 columns">
         <a href="http://school-service.herokuapp.com/"><img src="/static/images/demo/school-finder.jpg"></a>
         <h3 class="heading-medium"><a href="http://school-service.herokuapp.com/">School finder</a></h3>
          <p>A page for every <a href="http://school.openregister.org">school</a> showing related information from other registers.

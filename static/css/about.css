@@ -114,6 +114,11 @@ a:hover {
   padding-right: 30px;
 }
 
+.section-intro {
+  font-size: 24px;
+  margin-bottom: 45px;
+}
+
 .benefit {
   border-bottom: 2px solid #BFC1C3;
   padding-top: 15px;
@@ -134,7 +139,7 @@ a:hover {
 }
 
 .benefit__content {
-  color: #6F777B;
+  margin-bottom: 30px;
 }
 
 .header-wrapper {
@@ -165,8 +170,6 @@ a:hover {
 
 .register-visual-caption {
   color: #6F777B;
-  margin-left: 10px;
-  margin-bottom: -20px;
 }
 
 .who__wrapper {
@@ -178,13 +181,18 @@ a:hover {
 }
 
 .who__content {
-  padding-top: 15px;
 }
 
 .blurb {
   font-size: 24px;
   font-weight: bolder;
   margin: 90px 0 60px;
+}
+
+.privacy-icon {
+  width: 30px;
+  margin-left: 0!important;
+  margin-top: 30px;
 }
 
 .open-government-licence p {
@@ -202,4 +210,114 @@ code.url {
 
 .privacy-icon {
   margin-left: 50px;
+  float: left;
 }
+
+.callout {
+  font-weight: 700;
+  margin-top: 30px;
+  padding-left: 50px;
+}
+
+/* footer */
+.footer-wrapper {
+  max-width: 100% !important;
+  background: #dee0e2 !important;
+  padding-top: 5px;
+  margin-top: 60px;
+
+}
+
+.footer {
+  padding-top: 55px;
+  padding-bottom: 50px;
+  margin-top: 60px;
+  vertical-align: baseline;
+  color: #454a4c;
+}
+
+.footer a {
+  color: #454a4c;
+  text-decoration: underline;
+}
+
+.footer a.link--no-underline {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #0b0c0c;
+}
+
+.open-government-licence {
+ display: inline-block;
+ position: relative;
+ padding-left: 53px;
+ margin-top: 14%;
+ vertical-align: baseline;
+}
+
+.open-government-licence p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0;
+  padding-top: 0.1em;
+}
+
+
+.open-government-licence .logo a {
+  display: block;
+  width: 41px;
+  height: 17px;
+  overflow: hidden;
+  text-indent: -999em;
+  background: url(https://assets.digital.cabinet-office.gov.uk/static/images/open-government-licence-bb7be3c893eb5888731ff361bb6283ef.png) 0 0 no-repeat;
+}
+
+.open-government-licence .logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 41px;
+  height: 100%;
+}
+
+.copyright img {
+  margin-bottom: 12px;
+  padding-left: 8px;
+}
+
+.copyright p {
+  font-size: 16px;
+}
+
+.row-standards {
+  clear: both;
+}
+
+/* responsive styles */
+@media only screen and (max-width: 40em) {
+  .intro p {
+    margin-bottom: 4px;
+  }
+
+  .copyright img {
+    margin-top: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 64em) {
+  .intro p {
+    margin-bottom: 4px;
+  }
+
+  .copyright img {
+    margin-top: 25px;
+  }
+
+}
+
