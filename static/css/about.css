@@ -1,27 +1,22 @@
 figure {
-  margin: 30px 0 15px;
-}
+  margin: 30px 0 15px; }
 
 body {
   color: #0B0C0C;
   font-size: 19px;
   line-height: 1.31579;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
 ul, ol, li, p {
-  font-size: 1em;
-}
+  font-size: 1em; }
 
 ul, ol {
   list-style-type: none;
-  margin-left: 0;
-}
+  margin-left: 0; }
 
 .list-bullet {
   list-style-type: disc;
-  padding-left: 20px;
-}
+  padding-left: 20px; }
 
 .heading-xlarge {
   font-size: 48px;
@@ -29,8 +24,7 @@ ul, ol {
   line-height: 1.04167;
   color: #0B0C0C;
   margin-top: 0.46875em;
-  margin-bottom: 0.9375em;
-}
+  margin-bottom: 0.9375em; }
 
 .heading-large {
   font-size: 36px;
@@ -38,8 +32,7 @@ ul, ol {
   line-height: 1.11111;
   color: #0B0C0C;
   margin-top: 1.04167em;
-  margin-bottom: 0.41667em;
-}
+  margin-bottom: 0.41667em; }
 
 .heading-medium {
   font-size: 24px;
@@ -47,8 +40,7 @@ ul, ol {
   line-height: 1.25;
   color: #0B0C0C;
   margin-top: 1.25em;
-  margin-bottom: 0.5em;
-}
+  margin-bottom: 0.5em; }
 
 .heading-small {
   font-size: 19px;
@@ -56,268 +48,164 @@ ul, ol {
   line-height: 1.31579;
   color: #0B0C0C;
   margin-top: 0.625em;
-  margin-bottom: 0.3125em;
-}
+  margin-bottom: 0.3125em; }
 
 p {
   color: #0B0C0C;
   line-height: 1.31579;
   margin-top: 0.3125em;
-  margin-bottom: 1.25em;
-}
+  margin-bottom: 1.25em; }
 
-.small-text,
-.register-visual-caption,
-.open-government-licence p {
+.small-text, .open-government-licence p {
   font-size: 16px;
-  line-height: 1.25;
-}
+  line-height: 1.25; }
 
 .text {
-  max-width: 30em;
-}
+  max-width: 30em; }
 
 .lede {
   margin-top: 0.3125em;
   margin-bottom: 1.25em;
-  font-size: 24px;
-}
+  font-size: 24px; }
 
 a {
-  color: #005EA5;
-}
+  color: #005EA5; }
 
 .link--underline, .blurb a,
 a:hover {
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
 .section--centre-align {
-  text-align: center;
-}
+  text-align: center; }
 
 .section, .section--dark {
-  padding: 60px 0;
-}
+  padding: 60px 0; }
 
 .section h1:first-of-type, .section--dark h1:first-of-type,
 .section h2:first-of-type,
 .section--dark h2:first-of-type {
-  margin-top: 0;
-}
+  margin-top: 0; }
 
 .section--dark {
-  background: #F8F8F8;
-}
+  background: #F8F8F8; }
 
 .section__side__heading {
-  padding-right: 30px;
-}
-
-.section-intro {
-  font-size: 24px;
-  margin-bottom: 45px;
-}
+  padding-right: 30px; }
 
 .benefit {
   border-bottom: 2px solid #BFC1C3;
-  padding-top: 15px;
-}
+  padding-top: 15px; }
 
 .benefit:first-child {
-  padding-top: 0;
-}
-
-.benefit:last-child {
-  border-bottom: none;
-}
+  padding-top: 0; }
 
 .benefit__heading {
   margin-top: 0;
-  color: #0b0c0c;
-  font-weight: bolder;
-}
+  color: #2372b5;
+  font-weight: bolder; }
 
 .benefit__content {
-  margin-bottom: 30px;
-}
+  color: #6F777B; }
 
 .header-wrapper {
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
   .header-wrapper p {
-    color: #fff;
-}
+    color: #fff; }
   .header-wrapper header {
-    margin-top: 0;
-}
+    margin-top: 0; }
 
 .header__heading {
-  color: #fff;
-}
+  color: #fff; }
 
 .header__nav a {
-  text-decoration: none;
-}
+  text-decoration: none; }
+  .header__nav a:hover {
+    text-decoration: underline; }
 
-.header__nav a:hover {
-  text-decoration: underline;
-}
+.lede a {
+  text-decoration: underline; }
 
-.register-visual {
+.lede a:hover {
+  color: #99CCFF; }
+
+.blog-posts {
+  font-size: 19px;
+  margin-bottom: 15px;
   margin-top: 45px;
-}
+  color: white;
+  font-weight: 700; }
 
-.register-visual-caption {
-  color: #6F777B;
-}
+li {
+  list-style-type: disc;
+  padding: 0;
+  margin-left: 30px; }
 
-.who__wrapper {
-  padding-top: 15px;
-}
+.blog-link a {
+  font-size: 19px;
+  text-decoration: underline; }
 
-.who-icons {
-  width: 50%;
-}
-
-.who__content {
-}
-
-.blurb {
-  font-size: 24px;
-  font-weight: bolder;
-  margin: 90px 0 60px;
-}
+.blog-link a:hover {
+  color: #99CCFF; }
 
 .privacy-icon {
-  width: 30px;
-  margin-left: 0!important;
-  margin-top: 30px;
-}
-
-.open-government-licence p {
-  margin-top: 0;
-}
-
-.demos img {
-  border: 1px solid #D5D5D5;
-  box-shadow: -6px 6px 10px 0px rgba(151,151,151,1);
-}
-
-code.url {
-  word-break: break-all;
-}
-
-.privacy-icon {
-  margin-left: 50px;
   float: left;
-}
+  width: 30px;
+  margin-left: 0 !important;
+  margin-top: 20px;
+  margin-right: 10px; }
+
+.note {
+  margin-top: 35px;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 25px; }
 
 .callout {
-  font-weight: 700;
-  margin-top: 30px;
-  padding-left: 50px;
-}
+  margin-top: 45px;
+  font-size: 19px;
+  line-height: 25px;
+  margin-bottom: 15px; }
 
-/* footer */
-.footer-wrapper {
-  max-width: 100% !important;
-  background: #dee0e2 !important;
-  padding-top: 5px;
-  margin-top: 60px;
+.register-visual {
+  margin-top: 0px; }
 
-}
+.register-visual-caption {
+  margin-bottom: 45px;
+  margin-top: 20px;
+  color: #6F777B;
+  font-size: 16px; }
 
-.footer {
-  padding-top: 55px;
-  padding-bottom: 50px;
-  margin-top: 60px;
-  vertical-align: baseline;
-  color: #454a4c;
-}
+.who__wrapper {
+  padding-top: 15px; }
 
-.footer a {
-  color: #454a4c;
-  text-decoration: underline;
-}
+.who-icons {
+  width: 70%; }
 
-.footer a.link--no-underline {
-  text-decoration: none;
-}
+.who__content {
+  padding-top: 15px; }
 
-.footer a:hover {
-  color: #0b0c0c;
-}
+.blurb {
+  font-size: 19px;
+  font-weight: bolder;
+  margin: 30px 0 30px; }
 
-.open-government-licence {
- display: inline-block;
- position: relative;
- padding-left: 53px;
- margin-top: 14%;
- vertical-align: baseline;
-}
+.data {
+  font-family: monospace, courier new, courier;
+  color: #6F777B; }
 
 .open-government-licence p {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 400;
-  text-transform: none;
-  margin: 0;
-  padding-top: 0.1em;
-}
+  margin-top: 0; }
 
+.heading-medium {
+  margin-top: 10px; }
 
-.open-government-licence .logo a {
-  display: block;
-  width: 41px;
-  height: 17px;
-  overflow: hidden;
-  text-indent: -999em;
-  background: url(https://assets.digital.cabinet-office.gov.uk/static/images/open-government-licence-bb7be3c893eb5888731ff361bb6283ef.png) 0 0 no-repeat;
-}
-
-.open-government-licence .logo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 41px;
-  height: 100%;
-}
-
-.copyright img {
-  margin-bottom: 12px;
-  padding-left: 8px;
-}
+.footer-wrapper {
+  max-width: 100% !important;
+  background: #dee0e2  !important;
+  padding-top: 5px;
+  margin-top: 0px; }
 
 .copyright p {
-  font-size: 16px;
-}
+  font-size: 16px; }
 
-.row-standards {
-  clear: both;
-}
-
-/* responsive styles */
-@media only screen and (max-width: 40em) {
-  .intro p {
-    margin-bottom: 4px;
-  }
-
-  .copyright img {
-    margin-top: 25px;
-  }
-
-}
-
-@media only screen and (max-width: 64em) {
-  .intro p {
-    margin-bottom: 4px;
-  }
-
-  .copyright img {
-    margin-top: 25px;
-  }
-
-}
-
+/*# sourceMappingURL=about.css.map */
