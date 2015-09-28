@@ -22,9 +22,9 @@ if os.environ.get('BASIC_AUTH_USERNAME'):
 def index():
     return render_template("index.html")
 
-@app.route("/demo")
-def about():
-    return render_template("demo.html")
+@app.route("/demos")
+def demos():
+    return render_template("demos.html")
 
 @app.route("/developer")
 def documentation():
