@@ -147,17 +147,12 @@ strong {
   /*border-top: 1px solid #BFC1C3;*/
 }
 
-#ogl-logo {
-  margin-top: 3px;
-}
-
 .open-government-licence {
   margin-top: 35px;
 }
 
 .open-government-licence p {
   font-size: 0.7rem;
-  margin-left: -10px;
   line-height: 0.9rem;
 }
 

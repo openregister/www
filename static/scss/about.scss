@@ -164,7 +164,22 @@ li {
 }
 
 .copyright p {
-   font-size: 16px;
+  font-size: 15px;
+  white-space: nowrap;
 }
 
+p.logo {
+  margin-top: 108px;
+}
 
+.ogl-text {
+  margin-left: -45px;
+}
+
+a.logo-image {
+  background-image: url(/static/images/ogl_logo.png);
+  background-size: 41px 17px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  text-indent: -9999em;
+}
