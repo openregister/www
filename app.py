@@ -26,6 +26,10 @@ def index():
 def demos():
     return render_template("demos.html")
 
+@app.route("/alternative")
+def alternative():
+    return render_template("alternative.html")
+
 @app.route("/developer")
 def documentation():
     return render_template("developer.html")

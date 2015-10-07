@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Registers{% endblock%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/about.css') }}">
+{% endblock %}
+{% block content %}
+
+<!-- top banner -->
+<div class="header-wrapper section">
+  <div class="row">
+    <header>
+      <div class="large-8 columns">
+        <h1 class="heading-xlarge">Registers</h1>
+          <p class="lede">A register is a datastore with high integrity, clear ownership and a standard API.</p>
+           
+          <p class="lede">Read about the user needs for registers and what they are in this<a href="https://gds.blog.gov.uk/2015/09/01/registers-authoritative-lists-you-can-trust/"> blog post</a>.</p>
+          
+          <img class="privacy-icon" src="/static/images/about/privacy-icon.png" alt="A sample entry in the School Register">
+          <p class="callout">The products developed in this alpha only use freely available and open data, along with some fictional test data.</p>
+      </div>
+      <div class="large-3 columns large-offset-1">
+        <img id="crest" src="/static/images/big_crest_white.png">
+      </div>
+      </div>
+    </header>
+  </div>
+</div>
+
+<section class="section">
+  <div class="row">
+    <div class="large-4 columns section__side">
+      <h2 id="what" class="heading-large section__side__heading">Building services using registers</h2>
+    </div>
+    <div class="large-8 columns">
+      <p>Registers present a standard Web API to access their data. They consistently use the same names for fields, allowing data to be easily linked across registers, which are potentially maintained by different organisations.</p>
+
+      <figure class="register-visual">
+          <img src="/static/images/about/building-services.png" alt="A sample entry in the School Register">
+          <figcaption class="register-visual-caption">Showing how data from different registers can be pulled into a service</figcaption>
+      </figure>
+
+      <p>The following items help people understand the implications of incorporating the data held in a register into their services:</p>
+        <ul>
+          <li>standards for presenting the provenance of the data</li> 
+          <li>how to contact the team maintaining a register</li>
+          <li>the status of the register data (Alpha, Beta or Live)</li>
+          <li>the licensing terms for reuse</li>
+        </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section--dark">
+      <div class="row">
+        <div class="large-4 columns section__side">
+          <h2 id="what" class="heading-large section__side__heading">Ways to use registers</h2>
+        </div>
+       <div class="large-8 columns">
+              
+              <h3 class="heading-medium">Product</h3>
+              <p>
+              A register can be installed on your own infrastructure using the register product.</p>
+              
+              <h3 class="heading-medium">Platform</h3>
+              <p>Multiple registers may be hosted on a single platform, and made available as software as a service.</p>
+            
+              <h3 class="heading-medium">Standard</h3>
+              <p>You can develop your own register software, and use the tests to confirm it meets the standard.</p>
+            
+      </div>
+    </section>
+    <section class="section">
+      <div class="row">
+        <div class="large-4 columns section__side">
+          <h2 id="what" class="heading-large section__side__heading">Registers and how they work</h2>
+        </div>
+       <div class="large-8 columns">
+          <h3 class="heading-medium">Sample Register</h3>
+          <figure class="register-visual">
+              <img src="/static/images/about/register-record2.png" alt="A sample entry in the School Register">
+              <!-- <figcaption class="register-visual-caption">Showing how data from different registers can be pulled into a service</figcaption> -->
+            </figure>
+
+            <p class="lede">These are terms that describe the composition of a register.</p>
+
+            <h3 class="heading-medium">Register</h3>
+            <p>A register is an append-only lists of immutable entries. You can append entries to a register, but you cannot change the content of existing entries.</p>
+
+            <h3 class="heading-medium">Entry</h3>
+            <p>Each entry in a register is a set of field and value pairs. You can identify an entry using the serial number within a register, or using the hash of its contents.</p>
+
+            <h3 class="heading-medium">Field</h3>
+            <p>Each entry is comprised of a set of fields, each field is a name, used consistently across all registers. Each field name is recorded in the field register.</p>
+
+            <h3 class="heading-medium">Value</h3>
+            <p>The value of each field is constrained by the datatype, such as a string or datetime.</p> 
+
+            <h3 class="heading-medium">Primary Key Field</h3>
+            <p>Each Register has a primary key which is a field which must appear in each and every entry. The primary key field has the same name as the name of the register.</p>
+
+            <h3 class="heading-medium">Record</h3>
+            <p>The set of all entries in a register that share the same primary key value is known as a record, and can be identified by the key value.</p>
+
+            <h3 class="heading-medium">History</h3>
+            <p>An entry is earlier than another if it has a lower serial number than the other in the register’s list. Hence ‘latest entry of a register’ or ‘latest entry of a record.’</p>
+
+            <h3 class="heading-medium">Link</h3>
+            <p>The definition of a field in the field register may indicate the value is to be treated as a reference to a record in another register. For example the string value <span class="data">FR</span> in a country field may be treated a link to the entry with the key value <span class="data">FR</span> in the country register, and the <a href="http://www.w3.org/TR/curie/">CURIE</a> value <span class="data">school:1234567</span> indicates the entry in the school register with the key value <span class="data">1234567</span>.</p>
+      </div>
+    </section>
+
+{% endblock %}
