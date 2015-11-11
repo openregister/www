@@ -30,6 +30,10 @@ def demos():
 def alternative():
     return render_template("alternative.html")
 
+@app.route("/how-registers-work")
+def howregisterswork():
+    return render_template("how-registers-work.html")
+
 @app.route("/developer")
 def documentation():
     return render_template("developer.html")
