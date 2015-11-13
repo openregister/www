@@ -223,4 +223,13 @@ a.logo-image {
   display: inline-block;
   text-indent: -9999em; }
 
+li {
+  margin-left: 20px; }
+
+li a {
+  text-decoration: none; }
+
+li a:hover {
+  color: #99CCFF; }
+
 /*# sourceMappingURL=about.css.map */
