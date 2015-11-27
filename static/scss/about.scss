@@ -20,10 +20,16 @@
 // header tweaks
 // ---
 .header-wrapper {
-  margin-bottom: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 30px;
 
   p {
     color: #fff;
+  }
+
+  p a{
+    text-decoration: underline;
   }
 
   header {
@@ -42,7 +48,6 @@
     text-decoration: underline;
   }
 }
-
 
 .lede a {
   text-decoration: underline;
@@ -160,9 +165,22 @@ li {
  max-width: 100% !important;
  background: #dee0e2  !important;
  padding-top: 5px;
- margin-top: 0px;
+ margin-top: 60px;
 
 }
+
+.back {
+  margin-bottom: 15px;
+}
+
+.back a {
+  text-decoration: none;
+}
+
+.back a:hover {
+  text-decoration: underline;
+}
+
 
 .copyright p {
   font-size: 15px;
@@ -183,4 +201,16 @@ a.logo-image {
   background-repeat: no-repeat;
   display: inline-block;
   text-indent: -9999em;
+}
+
+li {
+  margin-left: 20px;
+}
+
+li a{
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #99CCFF;
 }
