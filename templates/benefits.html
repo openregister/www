@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Registers{% endblock%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/about.css') }}">
+{% endblock %}
+{% block content %}
+
+<!-- top banner -->
+<div class="header-wrapper section">
+  <div class="row">
+    <header>
+      <div class="large-8 columns">
+      <div class="back">
+        <a href="javascript:history.back()">&#9664; Back</a>
+      </div>
+        <h1 class="heading-xlarge">The benefits of registers</h1>
+      </div>
+    </header>
+  </div>
+</div>
+<section class="section">
+  <div class="row">
+    <div class="large-4 columns section__side">
+    </div>
+    <div class="large-8 columns">
+      <p class="lede">If you’re running a service team or an entire government department, what do registers give you that you didn’t have before? What are the benefits?</p>
+
+      <p>We’ve made a list:</p>
+
+      <h3 class="heading-small">You get data you can make use of</h3> 
+        <p>Too much government data is bad data – maybe it’s published as an inaccessible PDF, or it’s digital but it lives on a single computer in a single department. Even if the data itself is perfect, it’s not much good to government if it’s hard to reach. Registers make data available, in a standardised way, to the rest of government and beyond. They make the data we have more useful.</p>
+
+      <h3 class="heading-small">You’re free from the burden of gathering and maintaining data you never wanted or needed to gather in the first place</h3> 
+        <p>Lots of government departments end up collecting the same data, over and over again, because there aren’t existing ways for them to use a single canonical source that’s shared by all. Registers fix that. Each register is a list of one specific type of thing, but it’s the list, the only one in the country and the only one that counts. Because it’s built on standards, the data it contains can be used by many different organisations. And that means those organisations don’t have to worry about that data any more, and can focus their efforts on what they were set up to do.</p>
+
+      <h3 class="heading-small">You get more access to more data across government</h3> 
+        <p>That’s because registers are designed to be linked to one another. Your digital services can make the most of the data that’s available. Ultimately, you’ll probably have access to more data than you did before, without actually having to gather and maintain it yourself.</p>
+
+      <h3 class="heading-small">We all build a network of trust across government</h3> 
+        <P>That’s a good thing. Registers are a distributed network, spread across government. They’re not something that’s centralised and controlled from one place. Government teams already use each other’s data, but putting the data in registers lets us do that much better. Part of the definition of a register is that it’s an authoritative list. It has integrity. If your department or agency is the custodian of a register, you command respect from other departments and agencies for looking after it. That relationship works both ways: you’ll have the same respect for registers managed elsewhere. You trust them, they trust you. Everyone gains.</P>
+
+      <h3 class="heading-small">Users get better digital services</h3> 
+        <p>Ultimately, this is what we’re all here for. Good, usable, accessible data is essential for making Government as a Platform work. It’s the foundation upon which everything else rests. Registers are the best way for managing and storing the most important datasets – they’re the foundation stone of the new digital state.</p>
+
+      </div>
+    </section>
+
+{% endblock %}
