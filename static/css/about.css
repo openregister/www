@@ -220,6 +220,13 @@ li {
 .back a:hover {
   text-decoration: underline; }
 
+.read-more-link {
+  font-weight: bold;
+  text-decoration: none; }
+
+.read-more-link a:hover {
+  text-decoration: underline; }
+
 .copyright p {
   font-size: 15px;
   white-space: nowrap; }
