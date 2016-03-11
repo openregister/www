@@ -152,6 +152,15 @@ li {
   color: $secondary-text;
 }
 
+pre {
+  padding-top: 15px;
+  font-family: monospace, courier new, courier;
+  border: 1px solid black;
+  font-size: 14px;
+  background-color: #F8F8F8;
+  word-wrap: break-word;
+}
+
 .open-government-licence p {
   margin-top: 0;
   @extend .small-text;

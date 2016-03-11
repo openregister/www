@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}Registers{% endblock%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/about.css') }}">
+{% endblock %}
+{% block content %}
+
+<!-- top banner -->
+<div class="header-wrapper section">
+  <div class="row">
+    <header>
+      <div class="large-8 columns">
+        <h1 class="heading-xlarge">Modelling register data (beta)</h1>
+      </div>
+    </header>
+  </div>
+</div>
+<section class="section">
+  <div class="row">
+    <div class="large-4 columns section__side">
+    </div>
+    <div class="large-8 columns">
+      <p>In this section we have set out the approach to modelling the data in a new register, including:</p>
+        <ul>
+            <li>naming conventions for registers and fields</li>
+            <li>appropriate datatype usage</li>
+            <li>how linking across registers is supported</li> 
+            <li>supporting privacy protection</li>
+            <li>Versioning and extensibility</li>
+            <li>Semantics and metadata</li>
+        </ul>
+
+        <p>The data modelling approach has been developed through working with domain experts from across government to build new registers, and will be iterated based on broad feedback from users including: digital teams building services using registers, and data scientists and others making visualisations and performing analysis on the data.</p>
+
+        <p>The Registers Design Authority, which sits within the GDS Data group is responsible for maintaining and iterating these guidelines.</p>
+
+        <p>These rules supplement the <a href="http://openregister.github.io/specification/">technical specification</a> and are to be used in conjunction with the <a href="http://www.openregister.org/running-registers">operational standards for the custodian of a register</a>.</p>
+
+    <h2 class="heading-medium">Naming conventions for registers and fields</h2>
+      <ol>
+        <li class='list-number'>A register appearing on the register.gov.uk domain must be defined in the <a href="https://register.register.gov.uk/">Register Register</a>.</li>
+        
+        <li class='list-number'>A register must only use fields defined in its register register entry, each field name must be listed in the <a href="https://field.register.gov.uk/">Field Register</a>, and each field MUST use a datatype listed in the <a href="https://datatype.register.gov.uk/">Datatype Register</a> — the Registers Design Authority is the Registrar of the Register, Field and Datatype registers.</li>
+
+        <li class='list-number'>The name of a register is the noun describing a single entry: “country”, “school”, “address”, etc.</li>
+        <li class='list-number'>Each register must contain a field with the same name as the register, this is known as the key-field.</li>
+        <li class='list-number'>Register and field names are lower-case latin characters. Where a name contains several words they are connected by a hyphen. Registers use the kebab-case-naming-convention: “local-authority”, “food-premises”, “food-standards-rating”.</li>
+        <li class='list-number'>Register and field names should not include acronyms or abbreviations, but use full English names. For example: “address” rather than “uprn”, “school” rather than “edubase-id”, etc. Two notable exceptions to this rule being the name field which have a suffix indicating the ISO 639-1 language tag, eg “name-cy” for Welsh names, and a devolved register name which may have the code for the administrative area appended, eg “local-authority-nir” for local authorities in Northern Ireland.</li>
+        <li class='list-number'>Where possible, names should not use descriptive words such as “identifier”, “category” or “type”, rather the noun defining the categorisation itself, e.g. the register of Standard Industry Codes (SIC) might be called the “Industry Register”.</li>
+        <li class='list-number'>Register names are global across all registers. Any reference or use of the name of a register should refer directly back to the canonical register of that name, and should be consistently named in the context of HMG. For example “premises” could be the name for a business premises in England, Scotland and Wales, while “food-premises” is a register of premises recorded by the Food Standards Agency as a place of business involving food, whereas “school-premises” is a premises used by a “school” organisation.</li>  
+        <li class='list-number'>Field names should be reused across registers, if it is appropriate to do so. For example, the field “name” is used to translate a key-field value into a friendly name for a country in the Country register but it could also be used in the same way in the  territory or local-authority register. Similarly, the field “start-date” is used to record the date a country was recognised but it could also be used to record the date a food-premises was established in the food-premises register".</li>
+    </ol>
+
+  <h2 class="heading-medium">Use of datatypes</h2>
+      <ol>
+        <li class='list-number'>The datatype of a field should be as constrained as possible, and closely match the semantics of the field. For example, the datetime field should be used to represent a date, rather than a string containing a date in English, and a geographic location should use the “point” datatype, rather than a string containing latitude and longitude.</li>
+      </ol>
+
+
+  <h2 class="heading-medium">Linking between registers</h2>
+      <ol>
+        <li class='list-number'>The key-field is used as the identifier for a record, and may be combined with the name of the register to form a compact URI (<a href="http://openregister.github.io/specification/#curie-datatype">CURIE</a>) to identify the latest entry with a key-field value. For example, “<a href="https://country.register.gov.uk/country/MM">country:MM</a>”, “<a href="http://school.openregister.org/school/402175">school:402175</a>”, “<a href="http://address.openregister.org/address/10000103188">address:FR1-Z2S-3EU</a>” links to the latest information about Burma, a school in the school register, and an address in the proposed address register.</li>
+        <li class='list-number'>Existing widely-used identifiers should be used in the key-field of new registers, wherever possible. This will minimise disruption to existing systems and underlying processes, as a result of creating a register. It will also make it easier to migrate existing datasets to new registers. For example,  the ISO 3166 codes were selected to identify a country, territory or part of the United Kingdom. Companies House company number should be used as the key for the company register.</li>
+        <li class='list-number'>The precise version of an entry should be referenced using the fingerprint of an item when creating a precisely versioned document, such as a Land Registry title.</li>
+        <li class='list-number'>HTTP/HTTPS URIs should only be used to identify resources outside of registers, for example as a link to a school website.</li>
+
+<h2 class="heading-medium">The contents of a register</h2>
+      <ol>
+        <li class='list-number'>A register contains the minimal, canonical data and must not include synonyms or other identifiers whose only purpose is to map legacy data values. For example, the country register only contains the <a href="https://standards.data.gov.uk/profile/country-codes-standards-profile?stage=solution">ISO3166-2 alpha2 code, as mandated by the Open Standards Board</a>. It is the responsibility of a legacy service using other codes, such as the ISO three letter code, to map to the canonical register.</li>
+        <li class='list-number'>A register must only contain information about the noun being recorded. For example, the vehicle register may contain a ‘model’ field, but not information about the model such as its manufacturer and date of introduction. That information should be recorded in separate “vehicle-model” and “vehicle-manufacturer” registers.</li>
+      </ol>
+
+  <h2 class="heading-medium">Privacy</h2>
+
+      <ol>
+        <li class='list-number'>An open register register must only contain information which is public. An open register should not include links to a private register, unless the identifier is scoped to a single register item. For example, a “land-title” should not link to a “proprietor” for all titles, but could link to a “land-title-proprietor” in which the “proprietor” has a different key-field value for each land-title.</li>
+      </ol>
+
+  <h2 class="heading-medium">Versioning and extensibility</h2>
+
+      <p>The data in registers may be extended and evolved over time as our understanding of the domain changes. This is why it is important that they are are designed to remain backwards compatible with previous versions, and to allow users’ services and products to be forwards-compatible with future changes:</p>
+
+        <ol>
+            <li class='list-number'>A field or a register may only change its semantics in a way which remains backwards compatible. For example, a “town” field in an address register could begin as being the name of the town of datatype ‘string’, then become a reference to a new “town” register, but cannot be changed to be numeric code without breaking existing consumers.</li> 
+            <li class='list-number'>A consumer of a register must ignore possible additional fields and values in a register item. The “country” register could have an additional “official-currency” field, without breaking the implementations of existing consumers.</li> 
+            <li class='list-number'>Every field in a register is optional, with the exception of the key-field. A consumer must apply appropriate default values or behaviour for a missing field. This is to facilitate point (2).</li>
+        </ol>
+
+      <p>Extensibility may be used to introduce data, API and other feature changes to live registers which are backwards incompatible. See the section on versioning and extensibility in the <a href="http://openregister.github.io/specification/">technical specification</a>.</p>
+
+
+  <h2 class="heading-medium">Semantics and metadata</h2>
+
+      <p>The field, datatype and register register collectively provide metadata defining the structure and semantics of data held in registers. This metadata is used to generate RDF data using the register vocabulary. For example, the country register entry for Sao Tome and Principe is available from <a href="https://country.register.gov.uk/country/ST.ttl">https://country.register.gov.uk/country/ST.ttl</a> in the <a href="https://www.w3.org/TR/turtle/">W3C RDF/Turtle</a> representation as follows:</p>
+
+      <p>
+
+      <pre>
+      @prefix field: &lt;http://field.register.gov.uk/field/&gt;
+      &lt;http://country.register.gov.uk/entry/157&gt;
+      field:citizen-names "Citizen of Sao Tome and Principe" ;
+      field:country &lt;http://country.register.gov.uk/country/ST&gt; ;
+      field:name "Sao Tome and Principe" ;
+      field:official-name "The Democratic Republic of Sao Tome and Principe" ;
+      field:start-date "1975-07-12".
+      </pre>
+
+      </p>
+
+      <p>Each field name is precisely described using a URI, and data is presented, where appropriate, as URIs.</p>
+
+      <p>There are many different, competing vocabularies in use around the web. Some examples are: linked data initiatives such as <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> for document authors, and other metadata. Vocabularies designed for annotating pages to facilitate search, such as the Google-led <a href="http://schema.org/">schema.org</a>. Vocabularies designed for a specific context, such as the <a href="https://www.w3.org/TR/vocab-dcat/">DCAT</a> vocabulary used for listing datasets on data.gov.uk as well as proto-standards such as <a href="http://microformats.org/wiki/microformats2">microformats</a> which draw their names from standards such as vcard and iCalendar (mandated by the Open Standards Board for contact and calendar data).</p>
+
+      <p>It is the role of a service, be that an interactive digital service, a web page on GOV.UK, or the publication of a dataset, to map the register fields and values to one or more vocabularies appropriate to their domain.</p>
+  </div>
+</section>
+
+{% endblock %}

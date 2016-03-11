@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Registers{% endblock%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/about.css') }}">
+{% endblock %}
+{% block content %}
+
+<!-- top banner -->
+<div class="header-wrapper section">
+  <div class="row">
+    <header>
+      <div class="large-8 columns">
+        <h1 class="heading-xlarge">Operational specifications for running registers (beta)</h1>
+      </div>
+    </header>
+  </div>
+</div>
+<section class="section">
+  <div class="row">
+    <div class="large-4 columns section__side">
+    </div>
+    <div class="large-8 columns">
+      <p class="lede">Users get the value of the ecosystem of registers when they can trust the technology that underpins the registers and the underlying processes that keep their content fresh and accurate. Clarity about the way registrars run their registers are the basis of this trust. So we thought it would be a good idea to set out the operational specification for running registers.</p>
+
+      <p>It’s worth setting out some of the steps that need to happen before a registrar can begin running a registrar.</p>
+
+      <ul>
+        <li>Registrar of Registers has given you the authority to operate the register for a noun under register.gov.uk</li>
+        <li>The registrar’s organisation has demonstrated to the Register Domain Authority that it is able to maintain the register</li>
+        <li>The process behind the creation and new entries has been clearly mapped out</li>
+        <li>The register’s data was modelled in collaboration with the Register Domain Authority</li>
+        <li>The register is the canonical source of truth for the data it holds</li>
+      </ul>
+
+      <p>Once a register is up on the register.gov.uk domain, its users can be assured that the registrar is:</p>
+
+      <ol>
+          <li class='list-number'>Working with the Register Design Authority to ensure they’re meeting the rules for data modelling, redaction, correctly using existing registers and other requirements set out in the guidelines for modelling register data </li>
+
+          <li class='list-number'>Supporting processes which ensure they are able to meet user needs as they arise. At a minimum registrars must have:
+            <ol>
+            <li class='list-alpha'>some public forum for engaging with users of your data </li>
+            <li class='list-alpha'>if a change to the register or the contents, of the register will impact users communicate this via the public forum </li>
+            </ol>
+          </li>
+
+          <li class='list-number'>Able to guarantee the quality of data. A registrar must be able to demonstrate to the Register Domain Authority: 
+            <ol>
+              <li class='list-alpha'>A process (that’s directly related to the creation of records in the register) for validating records </li>
+              <li class='list-alpha'>The ability to ensure the correct processes are followed at the point of data creation (in other words that the data is correct at source)</li>
+              <li class='list-alpha'>Clear rules and processes for ensuring that data is reasonably protected from risk of error and fraud  
+
+              <p class="highlight">For example, whilst many changes to a register entry may be automatically accepted, a sample will be audited by casework team, or given more scrutiny under rules devised by the custodian’s fraud team.</p>
+              </li>
+
+              <li class='list-alpha'>Accountability to the regulator, if one exists for the domain.</li>
+            </ol>
+          </li>
+
+          <li class='list-number'>Working to ensure that update latency is as low as possible and that processes that support this are being continuously updated 
+            <ol>
+            <li class='list-alpha'>Wherever possible, update latency should be measured in hours rather than weeks.</li> 
+            <li class='list-alpha'>Update latency rates should be agreed with the Register Design Authority when the register was created and reviewed in line with technology and process improvements which allow for faster updates, as flagged by the Register Design Authority. </li>
+            </ol>
+          </li>
+
+          <li class='list-number'>Supporting a robust process for correcting faults in the data. Faults might be caused by data not meeting register standards or inaccuracies because the original entry was wrong or the data has become out of date.</li>
+          
+          <li class='list-number'>Supporting feedback loops so that there are clear processes for users of the register to propose changes and corrections to the data. Just as importantly, there is a clear process for integrating proposals from user feedback into the case management process for the register maintenance </li>
+          
+          <li class='list-number'>Committed to protecting longevity/permanence of data
+          <ol>
+            <li class='list-alpha'>In practice this means that changes to the legislation need to factor in the responsibilities of the registrar to its users in this regard </li>
+          </ol>
+        </li>
+          
+          <li class='list-number'>Committed to the protecting the history of entries (changes to records) and that this history is transparent to users.
+            
+            <p class="highlight"> This is critical if register data is to be considered trustworthy. For example, in order for the Land Registry to develop a reliance on Companies House company numbers as a reference, it needs to be able to trust Companies House to keep the data about the company available, long after a company may have been dissolved. </p>
+          </li> 
+
+          <li class='list-number'>Committed to maintening and updating of its GOV.UK register page (including the metadata for your data)</li>
+
+      </ol>
+
+
+
+
+      </div>
+    </section>
+
+{% endblock %}

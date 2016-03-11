@@ -17,14 +17,33 @@ ul, ol, li, p {
   font-size: 1em;
 }
 
-ul, ol {
+ul {
   list-style-type: none;
   margin-left: 0;
+}
+
+ol {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.list-number {
+    list-style-type: decimal;
+    margin-bottom: 15px;
+}
+
+.list-alpha {
+    list-style-type: upper-alpha;
 }
 
 .list-bullet {
   list-style-type: disc;
   padding-left: 20px;
+}
+
+.highlight {
+  border-left: 5px solid #BFC1C3;
+  padding-left: 10px;
 }
 
 .heading-xlarge {

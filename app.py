@@ -34,6 +34,14 @@ def alternative():
 def benefits():
     return render_template("benefits.html")
 
+@app.route("/running-registers")
+def runningregisters():
+    return render_template("running-registers.html")
+
+@app.route("/modelling-register-data")
+def modellingregisterdata():
+    return render_template("modelling-register-data.html")
+
 @app.route("/how-registers-work")
 def howregisterswork():
     return render_template("how-registers-work.html")
