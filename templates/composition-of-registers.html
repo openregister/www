@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Registers{% endblock%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/about.css') }}">
+{% endblock %}
+{% block content %}
+
+<!-- top banner -->
+<div class="header-wrapper section">
+  <div class="row">
+    <header>
+      <div class="large-8 columns">
+      <div class="back">
+        <a href="/">&#9664; Back</a>
+      </div>
+        <h1 class="heading-xlarge">The composition of registers</h1>
+      </div>
+    </header>
+  </div>
+</div>
+
+  <section class="section">
+      <div class="row">
+        <div class="large-4 columns section__side">
+        </div>
+       <div class="large-8 columns">
+
+            <p class="lede">These are terms that describe the composition of a register.</p>
+
+            <h3 class="heading-medium">Register</h3>
+            <p>A register is an append-only lists of immutable entries. You can append entries to a register, but you cannot change the content of existing entries.</p>
+
+            <h3 class="heading-medium">Entry</h3>
+            <p>Each entry in a register is a set of field and value pairs. You can identify an entry using the serial number within a register, or using the hash of its contents.</p>
+
+            <figure class="register-visual">
+              <img src="/static/images/about/register-entry-1.png" alt="A sample entry in the School Register">
+              <figcaption class="register-visual-caption">Sample entry in the School Register</figcaption>
+            </figure>
+
+            <h3 class="heading-medium">Field</h3>
+            <p>Each entry is comprised of a set of fields, each field is a name, used consistently across all registers. Each field name is recorded in the field register.</p>
+
+            <h3 class="heading-medium">Value</h3>
+            <p>The value of each field is constrained by the datatype, such as a string or datetime.</p> 
+
+            <h3 class="heading-medium">Primary Key Field</h3>
+            <p>Each Register has a primary key which is a field which must appear in each and every entry. The primary key field has the same name as the name of the register.</p>
+
+            <h3 class="heading-medium">Record</h3>
+            <p>The set of all entries in a register that share the same primary key value is known as a record, and can be identified by the key value.</p>
+
+            <h3 class="heading-medium">History</h3>
+            <p>An entry is earlier than another if it has a lower serial number than the other in the register’s list. Hence ‘latest entry of a register’ or ‘latest entry of a record.’</p>
+
+            <h3 class="heading-medium">Link</h3>
+            <p>The definition of a field in the field register may indicate the value is to be treated as a reference to a record in another register. For example the string value <span class="data">FR</span> in a country field may be treated a link to the entry with the key value <span class="data">FR</span> in the country register, and the <a href="http://www.w3.org/TR/curie/">CURIE</a> value <span class="data">school:1234567</span> indicates the entry in the school register with the key value <span class="data">1234567</span>.</p>
+
+            
+
+            <figure class="register-visual">
+            <figcaption class="register-visual-caption">School Register showing different records and multiple entries for the same record</figcaption>
+              <img src="/static/images/about/register-record3.png" alt="A sample entry in the School Register">
+            </figure>
+
+      </div>
+    </section>
+
+{% endblock %}

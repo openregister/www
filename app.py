@@ -38,6 +38,14 @@ def benefits():
 def runningregisters():
     return render_template("running-registers.html")
 
+@app.route("/using-registers")
+def usingregisters():
+    return render_template("using-registers.html")
+
+@app.route("/composition-of-registers")
+def compositionofregisters():
+    return render_template("composition-of-registers.html")
+
 @app.route("/modelling-register-data")
 def modellingregisterdata():
     return render_template("modelling-register-data.html")

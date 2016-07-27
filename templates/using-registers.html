@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Registers{% endblock%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/about.css') }}">
+{% endblock %}
+{% block content %}
+
+<!-- top banner -->
+<div class="header-wrapper section">
+  <div class="row">
+    <header>
+      <div class="large-8 columns">
+      <div class="back">
+        <a href="/">&#9664; Back</a>
+      </div>
+        <h1 class="heading-xlarge">Building services using registers</h1>
+      </div>
+    </header>
+  </div>
+</div>
+<section class="section">
+  <div class="row">
+    <div class="large-4 columns section__side">
+    </div>
+    <div class="large-8 columns">
+      <p class="lede">Registers present a standard Web API to access their data. They consistently use the same names for fields, allowing data to be easily linked across registers, which are potentially maintained by different organisations.</p>
+
+      <figure class="register-visual">
+          <img src="/static/images/about/building-services.png" alt="A sample entry in the School Register">
+          <figcaption class="register-visual-caption">Showing how data from different registers can be pulled into a service</figcaption>
+      </figure>
+
+      <p>The following items help people understand the implications of incorporating the data held in a register into their services:</p>
+        <ul>
+          <li>standards for presenting the provenance of the data</li> 
+          <li>how to contact the team maintaining a register</li>
+          <li>the status of the register data (Alpha, Beta or Live)</li>
+          <li>the licensing terms for reuse</li>
+        </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

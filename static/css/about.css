@@ -248,7 +248,8 @@ pre {
   text-decoration: none; }
 
 .read-more-link a:hover {
-  text-decoration: underline; }
+  text-decoration: underline;
+ }
 
 .copyright p {
   font-size: 15px;
@@ -274,6 +275,6 @@ li a {
   text-decoration: none; }
 
 li a:hover {
-  color: #99CCFF; }
+  color: #008CBA; }
 
 /*# sourceMappingURL=about.css.map */
