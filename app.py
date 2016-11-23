@@ -8,9 +8,15 @@ from flask import (
 )
 
 from flask.ext.basicauth import BasicAuth
+from flask.ext.cache import Cache
+
 from get_registers import get_all_registers
 
 app = Flask(__name__)
+cache = Cache(app, config={
+    'CACHE_TYPE': 'redis',
+    'CACHE_REDIS_URL': os.environ.get("REDIS_URL", "redis://localhost:6379"),
+})
 
 if os.environ.get('BASIC_AUTH_USERNAME'):
     app.config['BASIC_AUTH_USERNAME'] = os.environ['BASIC_AUTH_USERNAME']
@@ -63,6 +69,7 @@ def documentation():
 
 
 @app.route("/list_of_registers")
+@cache.cached(timeout=60*60*3)
 def list_of_registers():
     registers = [
         ('discovery', get_all_registers("discovery.openregister.org")),
