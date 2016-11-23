@@ -8,6 +8,7 @@ from flask import (
 )
 
 from flask.ext.basicauth import BasicAuth
+from get_registers import get_all_registers
 
 app = Flask(__name__)
 
@@ -58,5 +59,23 @@ def howregisterswork():
 def documentation():
     return render_template("developer.html")
 
+
+
+
+@app.route("/list_of_registers")
+def list_of_registers():
+    registers = [
+        ('discovery', get_all_registers("discovery.openregister.org")),
+        ('alpha', get_all_registers("alpha.openregister.org")),
+        ('beta', get_all_registers("beta.openregister.org")),
+        ('live', get_all_registers("register.gov.uk")),
+
+    ]
+
+    return render_template("list_of_registers.html", registers=registers)
+
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int(os.environ.get('PORT', '8002')), debug=True)
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get('PORT', '8002')),
+        debug=True)
