@@ -65,7 +65,7 @@ def documentation():
 
 
 
-@app.route("/list_of_registers")
+@app.route("/registers")
 @cache.cached(timeout=60*60*3)
 def list_of_registers():
     registers = [
