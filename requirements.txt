@@ -6,3 +6,6 @@ gunicorn==19.3.0
 itsdangerous==0.24
 Flask-BasicAuth==0.2.0
 Flask-Script==2.0.5
+requests==2.12.1
+Flask-Cache==0.13.1
+redis==2.10.5
