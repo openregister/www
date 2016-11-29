@@ -1,50 +1,74 @@
 {% extends "base.html" %}
 {% block title %}Registers{% endblock%}
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static',filename='css/about.css') }}">
 {% endblock %}
 {% block content %}
 
-<!-- top banner -->
 <div class="header-wrapper section">
   <div class="row">
     <header>
       <div class="large-8 columns">
-        <h1 class="heading-xlarge">Registers</h1>
-          <p class="lede">Registers are lists of information. Each register is the most reliable list of its kind.</p>
-          <p>Read an <a href="https://www.gov.uk/government/publications/registers/registers">introduction to registers</a> on GOV.UK.<p>
+        <h1>Registers</h1>
       </div>
     </header>
   </div>
 </div>
 
 
-
 <section class="section">
   <div class="row">
-    <div class="large-4 columns section__side">
-      <h2 id="what" class="heading-large section__side__heading">How registers work</h2>
-    </div>
-      <div class="large-8 columns">
+    <div class="large-8 columns">
+      <h2>Guidance</h2>
+      <p>Official <a href="https://www.gov.uk/government/collections/registers-guidance">guidance on registers</a> is published on <a href="https://www.gov.uk">GOV.UK</a>.</p>
+      <dl>
+        <dt><a href="https://www.gov.uk/government/publications/registers/registers">An introduction to registers</a></dt>
+        <dd>Find out more about how registers work and how they can benefit government service teams.</dd>
 
-          <p>Registers are minimum viable datasets. They are a better way of storing simple lists of things in standardised ways, separate from technology platforms and digital services.</p>
+        <dt><a href="https://www.gov.uk/guidance/registers-becoming-a-custodian">Becoming a custodian</a></dt>
+        <dd>Find out how to become the custodian of a register and what the role involves.</dd>
 
-          <p>They have <a href="https://gds.blog.gov.uk/2015/09/01/registers-authoritative-lists-you-can-trust/">clear user needs and purpose</a>. They share certain <a href="https://gds.blog.gov.uk/2015/10/13/the-characteristics-of-a-register/">characteristics</a> and are <a href="https://gds.blog.gov.uk/2015/12/16/linking-registers/">linked together</a>.</p>
+        <dt><a href="https://www.gov.uk/guidance/using-registers-to-build-a-service">Using registers to build a service</a></dt>
+        <dd>How government service teams can use registers to build digital services.</dd>
+      </dl>
 
-          <p>Every register is looked after by a custodian. That person is responsible for ensuring that data is <a href="https://gds.blog.gov.uk/2015/10/13/the-characteristics-of-a-register/#registerdata">accessible</a>, accurate, up-to-date, and hasn’t been tampered with.</p>
+      <h2>Source code</h2>
+      <p>The registers platform and associated products are being developed as open source software under the <a href="https://github.com/openregister">openregister</a> GitHub organisation.
+        We welcome feedback and <a href="https://github.com/alphagov/styleguides/blob/master/pull-requests.md">contributions</a>.</p>
 
-          <p>In practice, not all datasets need to be registers.</p>
+      <dl>
+        <dt><a href="https://github.com/openregister?utf8=%E2%9C%93&q=-data">Data repositories</a>
+        <dt><a href="https://github.com/openregister?utf8=%E2%9C%93&q=-demo">Demonstrations</a>
+      </dl>
 
-          <p>Registers are a cross-government need. GDS wants to support departments and agencies while they build their registers for their own use and that of others in government. We’re looking forward to working with <a href="https://gds.blog.gov.uk/digital-leaders-network/">Digital Leaders</a> and the Data Leaders Network to build this ecosystem of registers.</p>
+      <h2>History pages</h2>
+      <p>The shape of the data in a register is developed with a custodian, and in response to public feedback. The history page for a register documents this process.</p>
+      <dl>
+        <dt><a href="https://registers-history.herokuapp.com/country">Country</a></dt>
+        <dt><a href="https://registers-history.herokuapp.com/territory">Territory</a></dt>
+        <dt><a href="https://registers-history.herokuapp.com/local-authority-eng">Local Authority (England)</a></dt>
+        <dt><a href="https://registers-history.herokuapp.com/school-eng">School (England)</a></dt>
+      </dl>
 
-          <p>Further information:
-          <ul>
-            <li><a class="read-more-link" href="/using-registers">building services using registers</a></li>
-            <li><a class="read-more-link" href="/composition-of-registers">the composition of registers</a></li>
-            <li><a class="read-more-link" href="/modelling-register-data"> modelling the data in a new register</a></li>
-            <li><a class="read-more-link" href="/running-registers">operational specifications for running registers</a></li>
-            <li><a class="read-more-link" href="/list_of_registers">list of all registers</a></li>
-          </ul>
+      <h2>Registers</h2>
+      <dl>
+        <dt><a href="/registers">beta and live registers</a></dt>
+        <dt><a href="/registers">registers in alpha</a></dt>
+        <dt><a href="/registers">registers in discovery</a></dt>
+      </dl>
+
+      <h2>Blog posts</h2>
+      <p>The team have been writing about registers as they learn about the users and their needs, on the <a href="https://gds.blog.gov.uk">GDS</a>, <a href="https://data.blog.gov.uk">Government data</a> and other blogs.</p>
+
+        <dl>
+          <dt><a href="https://gds.blog.gov.uk/2015/09/01/registers-authoritative-lists-you-can-trust/">Registers, authoritative lists you can trust</a></dt>
+          <dt><a href="https://gds.blog.gov.uk/2015/10/13/the-characteristics-of-a-register/">The characteristics of a register</a>
+          <dt><a href="https://gds.blog.gov.uk/2015/12/16/linking-registers/">Linking registers</a></dt>
+          <dt><a href="https://gds.blog.gov.uk/2015/11/03/making-data-a-public-asset-through-infrastructure/">Making data a public asset through infrastructure</a></dt>
+          <dt><a href="https://gds.blog.gov.uk/2016/03/11/getting-from-data-to-registers/">Getting from data to registers</a></dt>
+          <dt><a href="https://gds.blog.gov.uk/2016/10/18/designing-the-register-creation-process/">Designing the register creation process</a></dt>
+          <dt><a href="https://data.blog.gov.uk/2016/10/14/introducing-the-register-history-page-tracking-a-registers-creation/">Introducing the register history page: tracking a register’s creation</a></dt>
+        </dl>
+
       </div>
     </div>
   </section>
