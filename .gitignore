@@ -64,3 +64,4 @@ target/
 _CACHE
 tmp
 dump.rdb
+*.swp
