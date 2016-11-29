@@ -32,7 +32,7 @@ def index():
 
 @app.route("/demos")
 def demos():
-    return render_template("demos.html")
+    return redirect('/', 302)
 
 @app.route("/benefits")
 def benefits():
