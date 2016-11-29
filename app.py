@@ -4,7 +4,8 @@ import os
 
 from flask import (
     Flask,
-    render_template
+    render_template,
+    redirect
 )
 
 from flask.ext.basicauth import BasicAuth
@@ -31,44 +32,40 @@ def index():
 
 @app.route("/demos")
 def demos():
-    return render_template("demos.html")
-
-@app.route("/alternative")
-def alternative():
-    return render_template("alternative.html")
+    return redirect('/', 302)
 
 @app.route("/benefits")
 def benefits():
-    return render_template("benefits.html")
+    return redirect('/', 302)
 
 @app.route("/running-registers")
 def runningregisters():
-    return render_template("running-registers.html")
+    return redirect('/', 302)
 
 @app.route("/using-registers")
 def usingregisters():
-    return render_template("using-registers.html")
+    return redirect('/', 302)
 
 @app.route("/composition-of-registers")
 def compositionofregisters():
-    return render_template("composition-of-registers.html")
+    return redirect('/', 302)
 
 @app.route("/modelling-register-data")
 def modellingregisterdata():
-    return render_template("modelling-register-data.html")
+    return redirect('/', 302)
 
 @app.route("/how-registers-work")
 def howregisterswork():
-    return render_template("how-registers-work.html")
+    return redirect('/', 302)
 
 @app.route("/developer")
 def documentation():
-    return render_template("developer.html")
+    return redirect('/', 302)
 
 
 
 
-@app.route("/list_of_registers")
+@app.route("/registers")
 @cache.cached(timeout=60*60*3)
 def list_of_registers():
     registers = [

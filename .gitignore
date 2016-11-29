@@ -62,3 +62,5 @@ target/
 .sass-cache
 
 _CACHE
+tmp
+dump.rdb

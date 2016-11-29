@@ -1,5 +1,5 @@
 body {
-  font: helvetica neue, arial;
+  font: "helvetica neue", arial;
   background-color: none;
   color: #0b0c0c;
   line-height: 1.5;
@@ -20,8 +20,7 @@ body {
 
 .header-wrapper {
   color: #ffffff;
-  background-color: #2372b5;
-  margin-bottom: 60px;
+  background-color: #2b8cc4;
 }
 
 .header-wrapper a {
@@ -40,14 +39,6 @@ header {
 
 header p {
   font-size: 24px;
-  margin-bottom: 30px;
-}
-
-header.docs {
-  margin-top: 30px;
-}
-
-header.docs h1 {
   margin-bottom: 30px;
 }
 
@@ -85,13 +76,13 @@ div.links {
 .button {
   border: solid 1px #2372b5 !important;
   background: inherit;
-  color: #2372b5;
+  color: #2b8cc4;
   padding: 15px;
 }
 
 .button:hover,
 .button:focus {
-  background-color: #2372b5;
+  background-color: #2b8cc4;
 }
 
 #phase-banner p {
@@ -164,6 +155,10 @@ strong {
 
 h1 {
   font-weight: bold;
+}
+
+h2 {
+  margin-top: 2.5rem;
 }
 
 code.shell {

@@ -7,15 +7,10 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='vendor/foundation/css/foundation.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
-    <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/dist/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='vendor/foundation/js/foundation.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery.cookie/jquery.cookie.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/about.css') }}">
     {% block head %} {% endblock %}
   </head>
   <body>
-    {% include 'phase.html' %}
-    {% include 'colophon.html' %}
     {% block content %}
     {% endblock %}
     {% include 'footer.html' %}
