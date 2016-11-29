@@ -63,20 +63,31 @@ def documentation():
     return redirect('/', 302)
 
 
+phases = {
+    'discovery': "discovery.openregister.org",
+    'alpha': "alpha.openregister.org",
+    'beta': "register.gov.uk"
+}
 
 
 @app.route("/registers")
 @cache.cached(timeout=60*60*3)
-def list_of_registers():
-    registers = [
-        ('discovery', get_all_registers("discovery.openregister.org")),
-        ('alpha', get_all_registers("alpha.openregister.org")),
-        ('beta', get_all_registers("beta.openregister.org")),
-        ('live', get_all_registers("register.gov.uk")),
+def all_registers():
+    registers = []
+    for phase in phases:
+        registers.append((phase, get_all_registers(phases[phase])))
 
-    ]
+    return render_template("list_of_registers.html", phase="All", registers=registers)
 
-    return render_template("list_of_registers.html", registers=registers)
+
+@app.route("/registers/<phase>")
+@cache.cached(timeout=60*60*3)
+def registers(phase):
+    registers = []
+    registers.append((phase, get_all_registers(phases[phase])))
+    return render_template("list_of_registers.html", phase=phase, registers=registers)
+
+
 
 if __name__ == '__main__':
     app.run(
